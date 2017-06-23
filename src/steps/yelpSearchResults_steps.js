@@ -28,7 +28,7 @@ module.exports = function(){
 	 });
 
 
-	this.When(/^User clicks on the name of restaurant (\d+))$/, function(elementNumber){
+	this.When(/^User clicks on the name of restaurant (\d+)$/, function(elementNumber){
 		YelpSearchResults.openBusinessPageByPosition();
 	});
 
