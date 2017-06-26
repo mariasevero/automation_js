@@ -12,12 +12,12 @@ Feature: Report results information
 		Then A list of restaurants is displayed		
 
 
-	Scenario: Report on Search Results Page
-		Then Console reports total number of Search results with number of results in the current page
-		And Console reports the star rating of each of the results in the first result page
+	# Scenario: Report on Search Results Page
+	# 	Then Console reports total number of Search results with number of results in the current page
+	# 	And Console reports the star rating of each of the results in the first result page
 
 
 	Scenario: Report critical information of a search result
-		When User clicks on the name of restaurant <result_number> 
+		When User clicks on the name of restaurant 1
 		Then Restaurant page is opened 
-		And Console reports critical information of the restaurant
+		# And Console reports critical information of the restaurant

@@ -41,7 +41,7 @@ exports.config = {
     // spawned. The property handles how many capabilities from the same test
     // should run tests.
     //
-    maxInstances: 1,
+    maxInstances: 5,
     //
     // If you have trouble getting all important capabilities together, check
     // out the Sauce Labs platform configurator - a great tool to configure your
@@ -51,7 +51,7 @@ exports.config = {
         // maxInstances can get overwritten per capability. So if you have an
         // in-house Selenium grid with only 5 firefox instance available you can
         // make sure that not more than 5 instance gets started at a time.
-        maxInstances: 1,
+        maxInstances: 5,
         //
         browserName: 'chrome',
     }],
@@ -78,7 +78,7 @@ exports.config = {
     //
     // Set a base URL in order to shorten url command calls. If your url
     // parameter starts with "/", then the base url gets prepended.
-    baseUrl: 'https://www.yelp.com',
+    // baseUrl: 'https://login.salesforce.com',
     // baseUrl: 'https://login.salesforce.com',
     //
     // Default timeout for all waitFor* commands.
@@ -220,12 +220,10 @@ exports.config = {
     // Function to be executed after a test (in Mocha/Jasmine) or a step (in
     // Cucumber) starts.
     // afterTest: function afterTest(test) {
-    //     browser.end();
     // },
     //
     // Hook that gets executed after the suite has ended
     // afterSuite: function afterSuite(suite) {
-    //     browser.end();
     // },
     //
     // Gets executed after all tests are done. You still have access to all

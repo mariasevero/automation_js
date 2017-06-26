@@ -10,8 +10,8 @@ module.exports = function(){
 		expect(isTitlePresent).to.equal(true, `Business title is present: ${isTitlePresent}`);
 	});
 
-	this.Then(/^Console reports critical information of the restaurant$/, function(){
-		YelpBusinessProfile.printBusinessInfo();
-	});
+	// this.Then(/^Console reports critical information of the restaurant$/, function(){
+	// 	YelpBusinessProfile.printBusinessInfo();
+	// });
 
 }

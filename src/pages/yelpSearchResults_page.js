@@ -9,6 +9,7 @@ class YelpSearchResults{
 	get priceFilter() { return browser.element(".filter-set.price-filters"); }
 	get categoryFilter() { return browser.element(".filter-set.category-filters"); }
 	
+	get searchResultOverlay() { return browser.elements(".throbber-overlay:not([style*=none])");}
 	get searchResultsList() { return browser.element("#super-container [class*=search-results-block] .search-results-content"); }
 	get searchResult() { return browser.elements(".regular-search-result"); }
 	
@@ -31,6 +32,9 @@ class YelpSearchResults{
 	}
 
 	isSearchResultsListPresent(){
+		browser.waitUntil(function () {
+	      return browser.isVisible(".throbber-overlay:not([style*=none])") == false;
+	    }, 5000, 'Overlay is still present');
 		this.searchResultsList.waitForVisible(10000);
 		return this.searchResultsList.isVisible();
 	}
@@ -68,7 +72,6 @@ class YelpSearchResults{
 
 
 	printStarRatingByBizName(){
-		browser.pause(5000);
 		var bizNameSelector = ".indexed-biz-name";
 		var bizStarRating = "[class*='i-stars']";
 
@@ -82,7 +85,7 @@ class YelpSearchResults{
 
 	
 	openBusinessPageByPosition(elementNumber){
-		var bizNameSelector = `[data-key='${elementNumber}'] .indexed-biz-name`;
+		var bizNameSelector = (`[data-key='${elementNumber}'] .indexed-biz-name`);
 		browser.element(bizNameSelector).click();
 	}
 

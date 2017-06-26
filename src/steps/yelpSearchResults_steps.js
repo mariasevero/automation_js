@@ -29,7 +29,7 @@ module.exports = function(){
 
 
 	this.When(/^User clicks on the name of restaurant (\d+)$/, function(elementNumber){
-		YelpSearchResults.openBusinessPageByPosition();
+		YelpSearchResults.openBusinessPageByPosition(elementNumber);
 	});
 
 }
