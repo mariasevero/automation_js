@@ -25,6 +25,7 @@ class YelpSearchResults{
 	appendFindInput(findValue){
 		var currentValue = this.findInput.getValue();
 		this.findInput.setValue(currentValue + " " + findValue);
+		console.log('>>>>>>>>>> ' + this.findInput.getText());
 	}
 
 	clickSearchButton(){
@@ -35,7 +36,7 @@ class YelpSearchResults{
 		browser.waitUntil(function () {
 	      return browser.isVisible(".throbber-overlay:not([style*=none])") == false;
 	    }, 5000, 'Overlay is still present');
-		this.searchResultsList.waitForVisible(10000);
+		this.searchResultsList.waitForVisible(3000);
 		return this.searchResultsList.isVisible();
 	}
 
@@ -85,12 +86,21 @@ class YelpSearchResults{
 
 	
 	openBusinessPageByPosition(elementNumber){
-		var bizNameSelector = (`[data-key='${elementNumber}'] .indexed-biz-name`);
-		browser.element(bizNameSelector).click();
+		//this.searchResultsList.waitForVisible(10000);
+		
+		var bizElement = `[data-key='${elementNumber}']`;
+		var bizElementPresent = browser.element(bizElement).isVisible();
+
+		var bizNameSelector = `[data-key='${elementNumber}'] .indexed-biz-name`;
+		//browser.pause(10000);
+		
+		if(bizElementPresent){
+			browser.element(bizNameSelector).click();
+		}else{
+			console.log("\n>>>>>\n>>>>>\n>>>>> No se encuentra el elemento para hacer click en su nombre");
+		}
+		
 	}
-
-
-
 
 
 }
