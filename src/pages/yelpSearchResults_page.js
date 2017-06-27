@@ -25,7 +25,6 @@ class YelpSearchResults{
 	appendFindInput(findValue){
 		var currentValue = this.findInput.getValue();
 		this.findInput.setValue(currentValue + " " + findValue);
-		console.log('>>>>>>>>>> ' + this.findInput.getText());
 	}
 
 	clickSearchButton(){
@@ -92,7 +91,7 @@ class YelpSearchResults{
 		var bizElementPresent = browser.element(bizElement).isVisible();
 
 		var bizNameSelector = `[data-key='${elementNumber}'] .indexed-biz-name`;
-		//browser.pause(10000);
+		browser.pause(10000);
 		
 		if(bizElementPresent){
 			browser.element(bizNameSelector).click();
@@ -110,7 +109,7 @@ module.exports = new YelpSearchResults();
 
 
 
-
+// HAVE TO REMOVE THE PAUSES FROM OPENBUSINESSPAGEBYPOSITION
 
 
 

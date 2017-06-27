@@ -7,7 +7,7 @@ class YelpBusinessProfile{
 	get bizAddress() { return browser.element(".street-address"); }
 	get bizPhone() { return browser.element(".biz-phone"); }
 	get bizWebsite() {return browser.element(".biz-website.js-add-url-tagging a"); }
-	//get customerReview() { return browser.elements$$(".review.review--with-sidebar .review-content p"); }
+	get customerReview() { return browser.elements(".review.review--with-sidebar .review-content p"); }
 
 	isBusinessNameTitlePresent(){
 		this.bizNameTitle.waitForVisible(10000);
@@ -18,33 +18,30 @@ class YelpBusinessProfile{
 		var address = this.bizAddress.getText();
 		address = address.split("\n");
 
-		var website = this.bizWebsite.getAttribute('href');
-		console.log("Catched href is: " + website);
-		var websiteURL = website.split("url");
-		var websiteURL = websiteURL[1].split("%2F", );
-		console.log("\nArray is:" + websiteURL);
-
-		console.log("\n ******** BUSINESS INFORMATION: " + this.bizNameTitle.getText() + "  ********" + 
+		console.log("\n ******** BUSINESS INFORMATION FOR: " + this.bizNameTitle.getText() + "  ********" + 
 					"\n Address: " + address[0] + ", " + address[1] +
 					"\n Phone: " + this.bizPhone.getText() + 
-					"\n Website: " + websiteURL[2] +
 					"\n Website by text: " + this.bizWebsite.getText()	
 					);
 	}
 
-	printCustomerReviews(){
-		var customerReview = browser.elements(".review.review--with-sidebar .review-content p"); 
+	printCustomerReviews(numberOfReviews){
 
 		console.log("-------- REVIEWS --------");
 
-		customerReview.value.forEach(function(element){
+		if (numberOfReviews > this.customerReview.value.length) {
+			console.log('number of reviews alaallala');
+			numberOfReviews = this.customerReview.value.length;
+		}
 
-			var reviewText = browser.elementIdElement(element.ELEMENT,customerReview).getValue();
 
-			console.log("\n" + reviewText +
-						"\n ---");
 
-		});
+		for (var i = 0 ; i < numberOfReviews; i++) {
+			var customerReviewText = browser.elementIdText(this.customerReview.value[i].ELEMENT).value;
+			var reviewNumber = i + 1;
+			console.log("============================== Review " + reviewNumber + " ==============================\n" +  
+					 	customerReviewText + "\n");
+		}		
 	}
 
 
