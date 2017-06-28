@@ -120,14 +120,15 @@ class YelpSearchResults{
 			console.log(hashes[x]['Category']);
 			console.log('====================');
 			
-			this.applyPriceFilter(hashes, x);
+			//this is the price filter, just need to change the method name to a generic one
+			this.applyTableValues(hashes, x, priceSelector, 'Price', '.filter-label');
 
 			console.log('wait for overlay to fade..');
 			browser.pause(5000);
 			this.waitForOverlayToFade();
 
 			// var selector = this.categoryFilter
-			this.applyCategoryFilter(hashes, x, categorySelector, 'Category', 'span');
+			this.applyTableValues(hashes, x, categorySelector, 'Category', 'span');
 
 		}
 
@@ -137,32 +138,11 @@ class YelpSearchResults{
 
 
 
-	//this method can be used to apply price filters
-	applyPriceFilter(hashes, x){
-		if(hashes[x]['Price']!= null) {
-
-				this.priceFilter.value.forEach(function(element){
-					var checkboxLabel = browser.elementIdElement(element.ELEMENT, '.filter-label').getText();
-
-					if(hashes[x]['Price']== checkboxLabel){
-						browser.elementIdElement(element.ELEMENT, '[type="checkbox"]').click();
-						UtilsPage.waitForPageToLoad();
-						console.log('applied price: ' + checkboxLabel);
-					}
-
-				});
-
-			}else{
-				console.log("The filter does not exist");
-			}
-	}
-
-
 	/*
 	 * 
 	*/
-	applyCategoryFilter(hashes, x, locator, hashKey, labelSelector){
-		console.log('apply filter: ' + hashes[x]['Category'])
+	applyTableValues(hashes, x, locator, hashKey, labelSelector){
+		console.log('apply filter: ' + hashes[x][hashKey])
 		if(hashes[x][hashKey] != null){
 			console.log('not null..')
 			var selectedOption = false;
@@ -170,7 +150,7 @@ class YelpSearchResults{
 					var checkboxLabel = browser.elementIdElement(element.ELEMENT, labelSelector).getText();
 					console.log('current label:' + checkboxLabel);
 
-					if(hashes[x]['Category'] == checkboxLabel){
+					if(hashes[x][hashKey] == checkboxLabel){
 						console.log('category == current label');
 						
 						browser.elementIdElement(element.ELEMENT, "[type='checkbox']").click();
@@ -185,7 +165,7 @@ class YelpSearchResults{
 					this.moreCategoriesLink.click();
 					console.log('CLICKED!');
 					var another = "#category-filters-content .category.radio-check";
-					this.applyCategoryFilter(hashes, x, another, hashKey, labelSelector);
+					this.applyTableValues(hashes, x, another, hashKey, labelSelector);
 					this.moreCategoryOverlySearchButton.click();
 					this.waitForOverlayToFade();
 				}
