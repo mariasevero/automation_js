@@ -32,4 +32,10 @@ module.exports = function(){
 		YelpSearchResults.openBusinessPageByPosition(elementNumber);
 	});
 
+	this.When(/^User applies filter values$/, function(table_values){
+		var hashes = table_values.hashes();
+		// var hardcodedfilter = "Price";
+		YelpSearchResults.applyFilters(hashes);
+	});
+
 }

@@ -5,9 +5,14 @@ class YelpSearchResults{
 	get findInput() { return browser.element("#find_desc"); }
 	get findSuggestionsList() { return browser.element("[class*=suggestions-list-container]:not([class*=hidden])"); }
 	get searchButton() { return browser.element("#header-search-submit"); }
+	
 	get allFiltersButton() { return browser.element("//*[@id='wrap']//*[@class='suggested-filters_filter-list']//li[7]"); }
-	get priceFilter() { return browser.element(".filter-set.price-filters"); }
-	get categoryFilter() { return browser.element(".filter-set.category-filters"); }
+	get priceFilter() { return browser.elements(".filter-set.price-filters .radio-check");}
+	get categoryFilter() { return browser.elements(".filter-set.category-filters .main .category.radio-check"); }
+	
+	//get priceFilter() { return browser.element(".filter-set.price-filters"); }
+	//get categoryFilter() { return browser.element(".filter-set.category-filters"); }
+
 	
 	get searchResultOverlay() { return browser.elements(".throbber-overlay:not([style*=none])");}
 	get searchResultsList() { return browser.element("#super-container [class*=search-results-block] .search-results-content"); }
@@ -67,7 +72,6 @@ class YelpSearchResults{
 		console.log("\n ******** REPORT OF SEARCH RESULTS: NUMBER OF RESULTS ********");
 		console.log("Total number of results: " + paginationData[0]);
 		console.log("Results in the current page: " + paginationData[1]);
-
 	}
 
 
@@ -85,20 +89,80 @@ class YelpSearchResults{
 
 	
 	openBusinessPageByPosition(elementNumber){
-		//this.searchResultsList.waitForVisible(10000);
-		
 		var bizElement = `[data-key='${elementNumber}']`;
 		var bizElementPresent = browser.element(bizElement).isVisible();
 
 		var bizNameSelector = `[data-key='${elementNumber}'] .indexed-biz-name`;
-		browser.pause(10000);
 		
 		if(bizElementPresent){
 			browser.element(bizNameSelector).click();
 		}else{
 			console.log("\n>>>>>\n>>>>>\n>>>>> No se encuentra el elemento para hacer click en su nombre");
+		}	
+	}
+
+	
+
+
+
+	applyFilters(hashes, filter){
+
+		this.allFiltersButton.waitForVisible(3000);
+		this.allFiltersButton.click();
+		this.priceFilter.waitForVisible(5000);
+
+		for(var x in hashes){
+			
+			
+			// INTENTO DE GENERICO -- AGREGAR PARAMETRO FILTER A LA FUNCION
+			// if(hashes[x][filter]!= null) {
+			// 	// Si el key está
+			// 	console.log("la key esta");
+
+			// }else{
+			// 	console.log("The filter does not exist");
+			// }
+
+
+			if(hashes[x]['Price']!= null) {
+
+				this.priceFilter.value.forEach(function(element){
+					var checkboxText = browser.elementIdElement(element.ELEMENT, '.filter-label').getText();
+					if(hashes[x]['Price']== checkboxText){
+						browser.elementIdElement(element.ELEMENT, '[type="checkbox"]').click();
+						console.log("el checkbox es " + checkboxText);
+						browser.pause(10000);
+					}
+				});
+
+			}else{
+				console.log("The filter does not exist");
+			}
+
+			if(hashes[x]['Category']!= null){
+
+				this.categoryFilter.value.forEach(function(element){
+					var checkboxText = browser.elementIdElement(element.ELEMENT, '[span]').getValue();
+					if(hashes[x]['Category']== checkboxText){
+						browser.elementIdElement(element.ELEMENT, '[type="checkbox"]').click();
+						console.log("el checkbox es " + checkboxText);
+						browser.pause(5000);
+					}
+				});
+
+			}else{
+				console.log("The filter does not exist");
+			}
+
+
+
+
 		}
-		
+
+
+
+
+
 	}
 
 
@@ -109,16 +173,35 @@ module.exports = new YelpSearchResults();
 
 
 
-// HAVE TO REMOVE THE PAUSES FROM OPENBUSINESSPAGEBYPOSITION
 
 
 
 
 
 
-	// tryThisForHash(hash){
 
-	// 	// console.log("Price: " + hash["Price"]);
-	// 	console.log(">>>>>>>>> " + hash.rowsHash());
-	// 	// console.log("Category: " + hash["Category"]);
-	// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
