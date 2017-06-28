@@ -1,6 +1,6 @@
 'use strict';
 
-var YelpBusinessProfile = require('../pages/yelpBusinessProfile_page.js');
+var YelpBusinessProfile = require('../pages/yelp_business_profile_page.js');
 
 
 module.exports = function(){

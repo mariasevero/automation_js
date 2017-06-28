@@ -1,6 +1,6 @@
 'use strict';
 
-var YelpHomePage = require('../pages/yelpHome_page.js');
+var YelpHomePage = require('../pages/yelp_home_page.js');
 
 module.exports = function(){
 

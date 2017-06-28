@@ -1,4 +1,5 @@
 'use strict';
+var UtilsPage = require('../pages/utils_page.js');
 
 class YelpSearchResults{
 
@@ -9,10 +10,6 @@ class YelpSearchResults{
 	get allFiltersButton() { return browser.element("//*[@id='wrap']//*[@class='suggested-filters_filter-list']//li[7]"); }
 	get priceFilter() { return browser.elements(".filter-set.price-filters .radio-check");}
 	get categoryFilter() { return browser.elements(".filter-set.category-filters .main .category.radio-check"); }
-	
-	//get priceFilter() { return browser.element(".filter-set.price-filters"); }
-	//get categoryFilter() { return browser.element(".filter-set.category-filters"); }
-
 	
 	get searchResultOverlay() { return browser.elements(".throbber-overlay:not([style*=none])");}
 	get searchResultsList() { return browser.element("#super-container [class*=search-results-block] .search-results-content"); }
@@ -105,7 +102,7 @@ class YelpSearchResults{
 
 
 
-	applyFilters(hashes, filter){
+	applyFilters(hashes){
 
 		this.allFiltersButton.waitForVisible(3000);
 		this.allFiltersButton.click();
@@ -113,58 +110,59 @@ class YelpSearchResults{
 
 		for(var x in hashes){
 			
-			
-			// INTENTO DE GENERICO -- AGREGAR PARAMETRO FILTER A LA FUNCION
-			// if(hashes[x][filter]!= null) {
-			// 	// Si el key está
-			// 	console.log("la key esta");
+			this.applyPriceFilter(hashes, x);
 
-			// }else{
-			// 	console.log("The filter does not exist");
-			// }
+			browser.waitUntil(function () {
+	      		return browser.isVisible(".throbber-overlay:not([style*=none])") == false;
+	    	}, 5000, 'Overlay is still present');
 
+			this.applyCategoryFilter(hashes, x);
 
-			if(hashes[x]['Price']!= null) {
-
-				this.priceFilter.value.forEach(function(element){
-					var checkboxText = browser.elementIdElement(element.ELEMENT, '.filter-label').getText();
-					if(hashes[x]['Price']== checkboxText){
-						browser.elementIdElement(element.ELEMENT, '[type="checkbox"]').click();
-						console.log("el checkbox es " + checkboxText);
-						browser.pause(10000);
-					}
-				});
-
-			}else{
-				console.log("The filter does not exist");
-			}
-
-			if(hashes[x]['Category']!= null){
-
-				this.categoryFilter.value.forEach(function(element){
-					var checkboxText = browser.elementIdElement(element.ELEMENT, '[span]').getValue();
-					if(hashes[x]['Category']== checkboxText){
-						browser.elementIdElement(element.ELEMENT, '[type="checkbox"]').click();
-						console.log("el checkbox es " + checkboxText);
-						browser.pause(5000);
-					}
-				});
-
-			}else{
-				console.log("The filter does not exist");
-			}
-
-
-
+			browser.waitUntil(function () {
+	      		return browser.isVisible(".throbber-overlay:not([style*=none])") == false;
+	    	}, 10000, 'Overlay is still present');			
 
 		}
 
-
-
-
+		browser.pause(10000);
 
 	}
 
+
+	applyPriceFilter(hashes, x){
+		if(hashes[x]['Price']!= null) {
+
+				this.priceFilter.value.forEach(function(element){
+					var checkboxLabel = browser.elementIdElement(element.ELEMENT, '.filter-label').getText();
+
+					if(hashes[x]['Price']== checkboxLabel){
+						browser.elementIdElement(element.ELEMENT, '[type="checkbox"]').click();
+						UtilsPage.waitForPageToLoad();
+					}
+
+				});
+
+			}else{
+				console.log("The filter does not exist");
+			}
+	}
+
+
+	applyCategoryFilter(hashes, x){
+		if(hashes[x]['Category']!= null){
+				this.categoryFilter.value.forEach(function(element){
+					var checkboxLabel = browser.elementIdElement(element.ELEMENT, 'span').getText();
+
+					if(hashes[x]['Category']== checkboxLabel){
+						browser.elementIdElement(element.ELEMENT, '[type="checkbox"]').click();
+						UtilsPage.waitForPageToLoad();
+					}
+
+				});
+			}else{
+				console.log("The filter does not exist");
+		}	
+	}
 
 }
 
@@ -192,7 +190,14 @@ module.exports = new YelpSearchResults();
 
 
 
+			// INTENTO DE GENERICO -- AGREGAR PARAMETRO FILTER A LA FUNCION
+			// if(hashes[x][filter]!= null) {
+			// 	// Si el key está
+			// 	console.log("la key esta");
 
+			// }else{
+			// 	console.log("The filter does not exist");
+			// }
 
 
 

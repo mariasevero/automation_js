@@ -1,6 +1,6 @@
 'use strict';
 
-var YelpSearchResults = require('../pages/yelpSearchResults_page.js');
+var YelpSearchResults = require('../pages/yelp_search_results_page.js');
 
 module.exports = function(){
 

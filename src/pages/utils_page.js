@@ -63,11 +63,19 @@ class UtilsPage {
 
     }
 
-    waitForElementExists(element, timeout){
+    waitForElementExists(element){
       var retries = 5;
       var success = false;
 
       while (retries-- > 0 && !(success = element.isExisting())) {
+        browser.pause(2000);
+      }
+    }
+
+    waitForPageToLoad(){
+      var retries = 5;
+
+      while (retries-- > 0 && ("complete" == browser.execute(function(){return document.readyState;}))) {
         browser.pause(2000);
       }
     }
