@@ -8,15 +8,15 @@ Feature: Search
 		Given I open the url "https://www.yelp.com"
 
 
-	# Scenario Outline: User searches a restaurant
-	# 	When User selects <category> in the drop-down box in Find
-	# 	And User appends <search_text> in the Find search field
-	# 	And User clicks on "Search" button
-	# 	Then A list of restaurants is displayed
+	Scenario Outline: User searches a restaurant
+		When User selects <category> in the drop-down box in Find
+		And User appends <search_text> in the Find search field
+		And User clicks on "Search" button
+		Then A list of restaurants is displayed
 
-	# 	Examples:
-	# 		| category    | search_text |
-	# 		| Restaurants | Pizza       | 
+		Examples:
+			| category    | search_text |
+			| Restaurants | Pizza       | 
 
 
 
