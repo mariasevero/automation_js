@@ -4,24 +4,16 @@ var UtilsPage = require('../pages/utils_page.js');
 class YelpSearchResults{
 
 	get findInput() { return browser.element("#find_desc"); }
-	get findSuggestionsList() { return browser.element("[class*=suggestions-list-container]:not([class*=hidden])"); }
 	get searchButton() { return browser.element("#header-search-submit"); }
 	
 	get allFiltersButton() { return browser.element("//*[@id='wrap']//*[@class='suggested-filters_filter-list']//li[7]"); }
-	get priceFilter() { return browser.elements(".filter-set.price-filters .radio-check");}
-	get categoryFilter() { return browser.elements(".filter-set.category-filters .main .category.radio-check"); }
 	get moreCategoriesLink() { return browser.element(".filter-set.category-filters a"); }
-	get categoryFilterOverlay() { return browser.elements(".filter-set.category-filters .category.radio-check"); }
-	get moreCategoryFilterList() { return browser.elements(".filter-set.category-filters .more .arrange_unit .category.radio-check");}
 	get moreCategoryOverlySearchButton() { return browser.element(".ybtn.ybtn-primary.ybtn-small");}
 	
 	get searchResultOverlay() { return browser.elements(".throbber-overlay:not([style*=none])");}
 	get searchResultsList() { return browser.element("#super-container [class*=search-results-block] .search-results-content"); }
 	get searchResult() { return browser.elements(".regular-search-result"); }
 	
-	get bizNameLabel() { return browser.element(".indexed-biz-name"); }
-	get paginationLabel() { return browser.element(".pagination-results-window"); }
-
 
 
 	clickFindInput(){
@@ -100,70 +92,46 @@ class YelpSearchResults{
 		}	
 	}
 
-	
-
 
 	// This method can be used to apply any filters
 	applyFilters(hashes){
 
 		this.allFiltersButton.waitForVisible(3000);
 		this.allFiltersButton.click();
-		this.priceFilter.waitForVisible(5000);
 
 		for(var x in hashes){
 
 			var priceSelector = ".filter-set.price-filters .radio-check";
 			var categorySelector = '.filter-set.category-filters .main .category.radio-check';
-
-			console.log('===================');
-			console.log(hashes[x]['Price']);
-			console.log(hashes[x]['Category']);
-			console.log('====================');
 			
-			//this is the price filter, just need to change the method name to a generic one
 			this.applyTableValues(hashes, x, priceSelector, 'Price', '.filter-label');
 
-			console.log('wait for overlay to fade..');
-			browser.pause(5000);
 			this.waitForOverlayToFade();
 
-			// var selector = this.categoryFilter
 			this.applyTableValues(hashes, x, categorySelector, 'Category', 'span');
 
 		}
-
 		browser.pause(10000);
-
 	}
 
 
-
 	/*
-	 * 
+	 *  This method applies the scenario table values to the filters
 	*/
 	applyTableValues(hashes, x, locator, hashKey, labelSelector){
-		console.log('apply filter: ' + hashes[x][hashKey])
 		if(hashes[x][hashKey] != null){
-			console.log('not null..')
 			var selectedOption = false;
 				browser.elements(locator).value.forEach(function(element){
 					var checkboxLabel = browser.elementIdElement(element.ELEMENT, labelSelector).getText();
-					console.log('current label:' + checkboxLabel);
 
 					if(hashes[x][hashKey] == checkboxLabel){
-						console.log('category == current label');
-						
 						browser.elementIdElement(element.ELEMENT, "[type='checkbox']").click();
-						UtilsPage.waitForPageToLoad();
-						console.log('applied category: ' + checkboxLabel);
 						selectedOption = true;
 					}
-
 				});
 
 				if (!selectedOption) {
 					this.moreCategoriesLink.click();
-					console.log('CLICKED!');
 					var another = "#category-filters-content .category.radio-check";
 					this.applyTableValues(hashes, x, another, hashKey, labelSelector);
 					this.moreCategoryOverlySearchButton.click();
@@ -175,57 +143,17 @@ class YelpSearchResults{
 	}
 
 
-
-
 	waitForOverlayToFade(){
 		browser.waitUntil(function () {
   		return browser.isVisible(".throbber-overlay:not([style*=none])") == false;
 		}, 5000, 'Overlay is still present');
 	}
 
+
+	
+
 }
 
 module.exports = new YelpSearchResults();
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-			// INTENTO DE GENERICO -- AGREGAR PARAMETRO FILTER A LA FUNCION
-			// if(hashes[x][filter]!= null) {
-			// 	// Si el key está
-			// 	console.log("la key esta");
-
-			// }else{
-			// 	console.log("The filter does not exist");
-			// }
-
-
-
-
-
-
-
-
-
-
 
 
