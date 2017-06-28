@@ -10,6 +10,10 @@ class YelpSearchResults{
 	get allFiltersButton() { return browser.element("//*[@id='wrap']//*[@class='suggested-filters_filter-list']//li[7]"); }
 	get priceFilter() { return browser.elements(".filter-set.price-filters .radio-check");}
 	get categoryFilter() { return browser.elements(".filter-set.category-filters .main .category.radio-check"); }
+	get moreCategoriesLink() { return browser.element(".filter-set.category-filters a"); }
+	get categoryFilterOverlay() { return browser.elements(".filter-set.category-filters .category.radio-check"); }
+	get moreCategoryFilterList() { return browser.elements(".filter-set.category-filters .more .arrange_unit .category.radio-check");}
+	get moreCategoryOverlySearchButton() { return browser.element(".ybtn.ybtn-primary.ybtn-small");}
 	
 	get searchResultOverlay() { return browser.elements(".throbber-overlay:not([style*=none])");}
 	get searchResultsList() { return browser.element("#super-container [class*=search-results-block] .search-results-content"); }
@@ -34,9 +38,7 @@ class YelpSearchResults{
 	}
 
 	isSearchResultsListPresent(){
-		browser.waitUntil(function () {
-	      return browser.isVisible(".throbber-overlay:not([style*=none])") == false;
-	    }, 5000, 'Overlay is still present');
+		this.waitForOverlayToFade();
 		this.searchResultsList.waitForVisible(3000);
 		return this.searchResultsList.isVisible();
 	}
@@ -101,7 +103,7 @@ class YelpSearchResults{
 	
 
 
-
+	// This method can be used to apply any filters
 	applyFilters(hashes){
 
 		this.allFiltersButton.waitForVisible(3000);
@@ -109,18 +111,23 @@ class YelpSearchResults{
 		this.priceFilter.waitForVisible(5000);
 
 		for(var x in hashes){
+
+			var priceSelector = ".filter-set.price-filters .radio-check";
+			var categorySelector = '.filter-set.category-filters .main .category.radio-check';
+
+			console.log('===================');
+			console.log(hashes[x]['Price']);
+			console.log(hashes[x]['Category']);
+			console.log('====================');
 			
 			this.applyPriceFilter(hashes, x);
 
-			browser.waitUntil(function () {
-	      		return browser.isVisible(".throbber-overlay:not([style*=none])") == false;
-	    	}, 5000, 'Overlay is still present');
+			console.log('wait for overlay to fade..');
+			browser.pause(5000);
+			this.waitForOverlayToFade();
 
-			this.applyCategoryFilter(hashes, x);
-
-			browser.waitUntil(function () {
-	      		return browser.isVisible(".throbber-overlay:not([style*=none])") == false;
-	    	}, 10000, 'Overlay is still present');			
+			// var selector = this.categoryFilter
+			this.applyCategoryFilter(hashes, x, categorySelector, 'Category', 'span');
 
 		}
 
@@ -129,6 +136,8 @@ class YelpSearchResults{
 	}
 
 
+
+	//this method can be used to apply price filters
 	applyPriceFilter(hashes, x){
 		if(hashes[x]['Price']!= null) {
 
@@ -138,6 +147,7 @@ class YelpSearchResults{
 					if(hashes[x]['Price']== checkboxLabel){
 						browser.elementIdElement(element.ELEMENT, '[type="checkbox"]').click();
 						UtilsPage.waitForPageToLoad();
+						console.log('applied price: ' + checkboxLabel);
 					}
 
 				});
@@ -148,20 +158,49 @@ class YelpSearchResults{
 	}
 
 
-	applyCategoryFilter(hashes, x){
-		if(hashes[x]['Category']!= null){
-				this.categoryFilter.value.forEach(function(element){
-					var checkboxLabel = browser.elementIdElement(element.ELEMENT, 'span').getText();
+	/*
+	 * 
+	*/
+	applyCategoryFilter(hashes, x, locator, hashKey, labelSelector){
+		console.log('apply filter: ' + hashes[x]['Category'])
+		if(hashes[x][hashKey] != null){
+			console.log('not null..')
+			var selectedOption = false;
+				browser.elements(locator).value.forEach(function(element){
+					var checkboxLabel = browser.elementIdElement(element.ELEMENT, labelSelector).getText();
+					console.log('current label:' + checkboxLabel);
 
-					if(hashes[x]['Category']== checkboxLabel){
-						browser.elementIdElement(element.ELEMENT, '[type="checkbox"]').click();
+					if(hashes[x]['Category'] == checkboxLabel){
+						console.log('category == current label');
+						
+						browser.elementIdElement(element.ELEMENT, "[type='checkbox']").click();
 						UtilsPage.waitForPageToLoad();
+						console.log('applied category: ' + checkboxLabel);
+						selectedOption = true;
 					}
 
 				});
+
+				if (!selectedOption) {
+					this.moreCategoriesLink.click();
+					console.log('CLICKED!');
+					var another = "#category-filters-content .category.radio-check";
+					this.applyCategoryFilter(hashes, x, another, hashKey, labelSelector);
+					this.moreCategoryOverlySearchButton.click();
+					this.waitForOverlayToFade();
+				}
 			}else{
 				console.log("The filter does not exist");
 		}	
+	}
+
+
+
+
+	waitForOverlayToFade(){
+		browser.waitUntil(function () {
+  		return browser.isVisible(".throbber-overlay:not([style*=none])") == false;
+		}, 5000, 'Overlay is still present');
 	}
 
 }
