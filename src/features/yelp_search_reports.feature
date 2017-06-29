@@ -4,6 +4,11 @@ Feature: Report results information
 	System has to print specific results data
 	to the console.
 
+	Considerations due to difference of Yelp actual behavior with Coding Challenge scenario:
+	- In Step 10, click and expand is not valid for list elements. In order to see business data, either 
+	the business name or 'read more' link have to be clicked. As both links take to the same
+	page, the automated scenario is clicking on business name.
+
 	Background: 
 		Given I open the url "https://www.yelp.com"
 		When User selects Restaurants in the drop-down box in Find
