@@ -26,12 +26,10 @@ class YelpBusinessProfile{
 
 	logCustomerReviews(numberOfReviews){
 		console.log("-------- REVIEWS --------");
-
 		if (numberOfReviews > this.customerReviewList.value.length) {
 			console.log('number of reviews alaallala');
 			numberOfReviews = this.customerReviewList.value.length;
 		}
-
 		for (var i = 0 ; i < numberOfReviews; i++) {
 			var customerReviewText = browser.elementIdText(this.customerReviewList.value[i].ELEMENT).value;
 			var reviewNumber = i + 1;

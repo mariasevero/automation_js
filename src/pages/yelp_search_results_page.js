@@ -2,20 +2,15 @@
 
 var UtilsPage = require('../pages/utils_page.js');
 
-class YelpSearchResults{
+class YelpSearchResultsPage{
 
 	get findInput() { return browser.element("#find_desc"); }
 	get searchButton() { return browser.element("#header-search-submit"); }
-	
 	get allFiltersButton() { return browser.element("//*[@id='wrap']//*[@class='suggested-filters_filter-list']//li[7]"); }
 	get moreCategoriesLink() { return browser.element(".filter-set.category-filters a"); }
 	get moreCategoryOverlySearchButton() { return browser.element(".ybtn.ybtn-primary.ybtn-small");}
-	
-	get searchResultOverlay() { return browser.elements(".throbber-overlay:not([style*=none])");}
 	get searchResultsList() { return browser.element("#super-container [class*=search-results-block] .search-results-content"); }
 	get searchResult() { return browser.elements(".regular-search-result"); }
-	
-
 
 	clickFindInput(){
 		this.findInput.click();
@@ -32,15 +27,16 @@ class YelpSearchResults{
 
 	isSearchResultsListPresent(){
 		this.waitForOverlayToFade();
-		this.searchResultsList.waitForVisible(3000);
+		//this.searchResultsList.waitForVisible(3000);
 		return this.searchResultsList.isVisible();
 	}
 
 	/*
-									---- getPaginationData() info ----
+									---- logNumberOfSearchResults() info ----
 
 	 PaginationLabel element has a value of the format "             Showing 1-10 of 1965         "	
-	 In the getPaginationData method, the text is stored in paginationText and blank spaces are trimmed.
+	 In the logNumberOfSearchResults method, the pagination label text has a value of the format 
+	 "             Showing 1-10 of 1965         "	and is stored in paginationText. Then blank spaces are trimmed.
 	 Then the text is splitted by blank spaces and each section is stored in paginationData array.
 	 Words are removed from paginationData array.
 	 The first value which has the format "1-10" is sliced into two and stored in resultsPerPage array.
@@ -48,7 +44,7 @@ class YelpSearchResults{
 	 At the end the method returns an array with 2 elements, the number of results per page and the total search results.
 	
 	 */
-	printPaginationData(){
+	logNumberOfSearchResults(){
 		var paginationText = browser.getHTML('.pagination-results-window', false);
 		paginationText = paginationText.trim();
 
@@ -61,12 +57,12 @@ class YelpSearchResults{
 
 		paginationData.splice(0, 1, resultsPerPage[1]);
 
-		console.log("\n ******** REPORT OF SEARCH RESULTS: NUMBER OF RESULTS ********");
-		console.log("Total number of results: " + paginationData[0]);
-		console.log("Results in the current page: " + paginationData[1]);
+		console.log("\n******** REPORT OF SEARCH RESULTS: NUMBER OF RESULTS ********" +
+					"\nTotal number of results: " + paginationData[0] +
+					"\nResults in the current page: " + paginationData[1]);
 	}
 
-	printStarRatingByBizName(){
+	logStarRatingByBizName(){
 		var bizNameSelector = ".indexed-biz-name";
 		var bizStarRating = "[class*='i-stars']";
 
@@ -88,7 +84,7 @@ class YelpSearchResults{
 			browser.scroll(bizNameSelector);
 			browser.element(bizNameSelector).click();
 		}else{
-			console.log("\n>>>>>\n>>>>>\n>>>>> No se encuentra el elemento para hacer click en su nombre");
+			console.log("The element can't be clicked because it was not found.");
 		}	
 	}
 
@@ -120,13 +116,11 @@ class YelpSearchResults{
 			var selectedOption = false;
 				browser.elements(locator).value.forEach(function(element){
 					var checkboxLabel = browser.elementIdElement(element.ELEMENT, labelSelector).getText();
-
 					if(hashes[x][hashKey] == checkboxLabel){
 						browser.elementIdElement(element.ELEMENT, "[type='checkbox']").click();
 						selectedOption = true;
 					}
 				});
-
 				if (!selectedOption) {
 					this.moreCategoriesLink.click();
 					var another = "#category-filters-content .category.radio-check";
@@ -134,18 +128,18 @@ class YelpSearchResults{
 					this.moreCategoryOverlySearchButton.click();
 					this.waitForOverlayToFade();
 				}
-			}else{
-				console.log("The filter does not exist");
+		}else{
+			console.log("The filter does not exist.");
 		}	
 	}
 
 	waitForOverlayToFade(){
 		browser.waitUntil(function () {
   		return browser.isVisible(".throbber-overlay:not([style*=none])") == false;
-		}, 5000, 'Overlay is still present');
+		}, 5000, 'Overlay is still present.');
 	}
 }
 
-module.exports = new YelpSearchResults();
+module.exports = new YelpSearchResultsPage();
 
 
