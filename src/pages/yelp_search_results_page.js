@@ -27,23 +27,17 @@ class YelpSearchResultsPage{
 
 	isSearchResultsListPresent(){
 		this.waitForOverlayToFade();
-		//this.searchResultsList.waitForVisible(3000);
 		return this.searchResultsList.isVisible();
 	}
 
-	/*
-									---- logNumberOfSearchResults() info ----
-
-	 PaginationLabel element has a value of the format "             Showing 1-10 of 1965         "	
-	 In the logNumberOfSearchResults method, the pagination label text has a value of the format 
-	 "             Showing 1-10 of 1965         "	and is stored in paginationText. Then blank spaces are trimmed.
-	 Then the text is splitted by blank spaces and each section is stored in paginationData array.
-	 Words are removed from paginationData array.
-	 The first value which has the format "1-10" is sliced into two and stored in resultsPerPage array.
-	 Finally, the first value "1-10" is removed and value 1 of resultsPerPage  "10" is added in its place.  
-	 At the end the method returns an array with 2 elements, the number of results per page and the total search results.
-	
-	 */
+	 /**
+	  * @desc: gets the results pagination level and logs total number of search results and 
+	  * 	   number of current page results. 
+	  * @var: paginationText, paginationData and resultsPerPage contain strings or array of strings 
+	  		  that are trimmed, splitted and modified until paginationData ends up only with 2 elements:
+	  		  the number of results per page and the total search results. The initial string is of the 
+	  		  type "             Showing 1-10 of 1965         " and is taken from the pagination label.		  
+	 */ 
 	logNumberOfSearchResults(){
 		var paginationText = browser.getHTML('.pagination-results-window', false);
 		paginationText = paginationText.trim();
