@@ -19,11 +19,11 @@ exports.config = {
     ],
     //
     reporters: ['spec'],
-    // reporterOptions: {
-    //     allure: {
-    //         outputDir: './src/reports/allure'
-    //     }
-    // },
+    reporterOptions: {
+        allure: {
+            outputDir: './src/reports/allure'
+        }
+    },
     // ============
     // Capabilities
     // ============
@@ -74,7 +74,7 @@ exports.config = {
     coloredLogs: true,
     //
     // Saves a screenshot to a given path if a command fails.
-    // screenshotPath: './errorShots/',
+    screenshotPath: './screenshots/',
     //
     // Set a base URL in order to shorten url command calls. If your url
     // parameter starts with "/", then the base url gets prepended.

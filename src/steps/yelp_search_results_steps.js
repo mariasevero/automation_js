@@ -17,16 +17,13 @@ module.exports = function(){
 		expect(isListPresent).to.equal(true, `List of results is present: ${isListPresent}`);
 	});
 
-
 	this.Then(/^Console reports total number of Search results with number of results in the current page$/, function(){
 		var printData = YelpSearchResultsPage.logNumberOfSearchResults();
 	});
 
-
 	this.Then(/^Console reports the star rating of each of the results in the first result page$/, function(){
 		YelpSearchResultsPage.logStarRatingByBizName();
 	 });
-
 
 	this.When(/^User clicks on the name of restaurant (\d+)$/, function(elementNumber){
 		YelpSearchResultsPage.openBusinessPageByPosition(elementNumber);
@@ -36,5 +33,4 @@ module.exports = function(){
 		var hashes = table_values.hashes();
 		YelpSearchResultsPage.applyFilters(hashes);
 	});
-
 }
