@@ -77,16 +77,15 @@ class YelpSearchResults{
 			console.log(title + ': ' + stars); 
 		});
 	}
-	
+
 	openBusinessPageByPosition(elementNumber){
 		var bizElement = `[data-key='${elementNumber}']`;
 		var bizElementPresent = browser.element(bizElement).isVisible();
 		var bizNameSelector = `[data-key='${elementNumber}'] .indexed-biz-name`;
 		
-		// CHANGE
-		browser.pause(10000);
-
 		if(bizElementPresent){
+			this.waitForOverlayToFade();
+			browser.scroll(bizNameSelector);
 			browser.element(bizNameSelector).click();
 		}else{
 			console.log("\n>>>>>\n>>>>>\n>>>>> No se encuentra el elemento para hacer click en su nombre");
@@ -111,7 +110,6 @@ class YelpSearchResults{
 			this.waitForOverlayToFade();
 			this.applyTableValues(hashes, x, categorySelector, 'Category', 'span');
 		}
-		//browser.pause(10000);
 	}
 
 	/*
