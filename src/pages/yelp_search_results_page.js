@@ -1,4 +1,5 @@
 'use strict';
+
 var UtilsPage = require('../pages/utils_page.js');
 
 class YelpSearchResults{
@@ -65,7 +66,6 @@ class YelpSearchResults{
 		console.log("Results in the current page: " + paginationData[1]);
 	}
 
-
 	printStarRatingByBizName(){
 		var bizNameSelector = ".indexed-biz-name";
 		var bizStarRating = "[class*='i-stars']";
@@ -77,14 +77,15 @@ class YelpSearchResults{
 			console.log(title + ': ' + stars); 
 		});
 	}
-
 	
 	openBusinessPageByPosition(elementNumber){
 		var bizElement = `[data-key='${elementNumber}']`;
 		var bizElementPresent = browser.element(bizElement).isVisible();
-
 		var bizNameSelector = `[data-key='${elementNumber}'] .indexed-biz-name`;
 		
+		// CHANGE
+		browser.pause(10000);
+
 		if(bizElementPresent){
 			browser.element(bizNameSelector).click();
 		}else{
@@ -92,28 +93,26 @@ class YelpSearchResults{
 		}	
 	}
 
-
-	// This method can be used to apply any filters
+	/*
+	 * This method can be used to apply any filter that is defined in the scenario data table
+	 * in the yelp_search feature. 
+	 * For each filter, a selector has to be defined and then the applyTableValues method has
+	 * to be called.
+	*/
 	applyFilters(hashes){
-
 		this.allFiltersButton.waitForVisible(3000);
 		this.allFiltersButton.click();
 
 		for(var x in hashes){
-
 			var priceSelector = ".filter-set.price-filters .radio-check";
 			var categorySelector = '.filter-set.category-filters .main .category.radio-check';
 			
 			this.applyTableValues(hashes, x, priceSelector, 'Price', '.filter-label');
-
 			this.waitForOverlayToFade();
-
 			this.applyTableValues(hashes, x, categorySelector, 'Category', 'span');
-
 		}
-		browser.pause(10000);
+		//browser.pause(10000);
 	}
-
 
 	/*
 	 *  This method applies the scenario table values to the filters
@@ -142,16 +141,11 @@ class YelpSearchResults{
 		}	
 	}
 
-
 	waitForOverlayToFade(){
 		browser.waitUntil(function () {
   		return browser.isVisible(".throbber-overlay:not([style*=none])") == false;
 		}, 5000, 'Overlay is still present');
 	}
-
-
-	
-
 }
 
 module.exports = new YelpSearchResults();
