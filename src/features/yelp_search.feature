@@ -7,7 +7,6 @@ Feature: Search
 	Background: 
 		Given I open the url "https://www.yelp.com"
 
-
 	Scenario Outline: User searches a restaurant
 		When User selects <category> in the drop-down box in Find
 		And User appends <search_text> in the Find search field
@@ -18,8 +17,6 @@ Feature: Search
 			| category    | search_text |
 			| Restaurants | Pizza       | 
 
-
-
 	Scenario: User applies filters
 		When User selects Restaurants in the drop-down box in Find
 		And User appends Pizza in the Find search field
@@ -29,4 +26,3 @@ Feature: Search
 			 | Price 	| Category 	|
 			 | $		| Italian 	|
 			 | $$		| Pizza 	|
-
