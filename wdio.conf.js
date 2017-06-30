@@ -18,7 +18,7 @@ exports.config = {
         // 'path/to/excluded/files'
     ],
     //
-    reporters: ['spec'],
+    reporters: ['spec', 'allure'],
     reporterOptions: {
         allure: {
             outputDir: './src/reports/allure'
