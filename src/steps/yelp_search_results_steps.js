@@ -1,11 +1,11 @@
 const YelpSearchResultsPage = require('../pages/yelp_search_results_page.js');
 
 module.exports = function () {
-  this.When(/^User appends ([^"]*) in the Find search field$/, function (findValue) {
+  this.When(/^I add ([^"]*) to the search$/, function (findValue) {
     YelpSearchResultsPage.appendFindInput(findValue);
   });
 
-  this.When(/^User clicks on "Search" button$/, function () {
+  this.When(/^I click on "Search" button$/, function () {
     YelpSearchResultsPage.clickSearchButton();
   });
 
@@ -22,11 +22,11 @@ module.exports = function () {
     YelpSearchResultsPage.logStarRatingByBizName();
   });
 
-  this.When(/^User clicks on the name of restaurant (\d+)$/, function (elementNumber) {
+  this.When(/^I click on the name of restaurant (\d+)$/, function (elementNumber) {
     YelpSearchResultsPage.openBusinessPageByPosition(elementNumber);
   });
 
-  this.When(/^User applies filter values$/, function (tableValues) {
+  this.When(/^I apply filters$/, function (tableValues) {
     const hashes = tableValues.hashes();
     YelpSearchResultsPage.applyFilters(hashes);
   });
