@@ -20,9 +20,9 @@ exports.config = {
     //
     reporters: ['spec'],
     reporterOptions: {
-        allure: {
-            outputDir: './src/reports/allure'
-        }
+        // allure: {
+        //     outputDir: './src/allure_output_dir'
+        // }
     },
     // ============
     // Capabilities

@@ -1,10 +1,8 @@
-'use strict';
-
 class UtilsPage {
 
-    goTo(site){
-        browser.url(site);
-    }
+  goTo(site) {
+    browser.url(site);
+  }
 
 }
 
