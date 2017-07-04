@@ -77,7 +77,7 @@ class YelpSearchResultsPage {
   }
 
   /**
-   * @desc: opens the business profile of a business which is selected by its position. 
+   * @desc: opens the business profile of a business which is selected by its position.
    *        in the list.
    */
   openBusinessPageByPosition(elementNumber) {
@@ -94,8 +94,8 @@ class YelpSearchResultsPage {
   }
 
   /**
-   * @desc: applies the filters that are defined in the scenario data table in the 
-   *        yelp_search feature. 
+   * @desc: applies the filters that are defined in the scenario data table in the
+   *        yelp_search feature.
    * @var: priceSelector is the selector for the price filters
    *       categorySelector is the selector for the category filters
    * Note: For more filters, add the filter selector variable and call applyTableValues
@@ -118,7 +118,7 @@ class YelpSearchResultsPage {
    *        it is searched in the More Categories overlay.
    * @var: selectedOption is the current filter that is being iterated
    * @var: checkbxLabel is the label of the filter that is being iterated
-   * @var: moreCategorySelector is the selector for the category filters that appear on the 
+   * @var: moreCategorySelector is the selector for the category filters that appear on the
    *       More Categories overlay.
    */
   applyTableValues(hashes, x, locator, hashKey, labelSelector) {
