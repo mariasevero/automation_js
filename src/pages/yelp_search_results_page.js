@@ -10,33 +10,39 @@ class YelpSearchResultsPage {
   get searchResultsList() { return browser.element('#super-container [class*=search-results-block] .search-results-content'); }
   get searchResult() { return browser.elements('.regular-search-result'); }
 
-  clickFindInput() {
-    this.findInput.click();
-  }
-
+  /**
+   * @desc: appends text to the find field.
+   */
   appendFindInput(findValue) {
     const currentValue = this.findInput.getValue();
     this.findInput.setValue(`${currentValue} ${findValue}`);
   }
 
+  /**
+   * @desc: clicks on Search button.
+   */
   clickSearchButton() {
     this.searchButton.click();
   }
 
+  /**
+   * @desc: verifies if a list of search results is present.
+   * @return: true or false.
+   */
   isSearchResultsListPresent() {
     this.waitForOverlayToFade();
     return this.searchResultsList.isVisible();
   }
 
-   /**
-    * @desc: gets the results pagination level and logs total number of search results and
-    *        number of current page results.
-    * @var: paginationText, paginationData and resultsPerPage contain strings or array of
-    *       strings that are trimmed, splitted and modified until paginationData ends up
-    *       only with 2 elements: the number of results per page and the total search results.
-    *       The initial string is of the type "             Showing 1-10 of 1965         "
-    *       and is taken from the pagination label.
-   */
+  /**
+  * @desc: gets the results pagination level and logs total number of search results and
+  *        number of current page results.
+  * @var: paginationText, paginationData and resultsPerPage contain strings or array of
+  *       strings that are trimmed, splitted and modified until paginationData ends up
+  *       only with 2 elements: the number of results per page and the total search results.
+  *       The initial string is of the type "             Showing 1-10 of 1965         "
+  *       and is taken from the pagination label.
+  */
   logNumberOfSearchResults() {
     let paginationText = browser.getHTML('.pagination-results-window', false);
     paginationText = paginationText.trim();
@@ -55,6 +61,9 @@ class YelpSearchResultsPage {
                 `\nResults in the current page: ${paginationData[1]}`);
   }
 
+  /**
+   * @desc: logs the name and rating of each business in the search result.
+   */
   logStarRatingByBizName() {
     const bizNameSelector = '.indexed-biz-name';
     const bizStarRating = "[class*='i-stars']";
@@ -67,6 +76,10 @@ class YelpSearchResultsPage {
     });
   }
 
+  /**
+   * @desc: opens the business profile of a business which is selected by its position. 
+   *        in the list.
+   */
   openBusinessPageByPosition(elementNumber) {
     const bizElement = `[data-key='${elementNumber}']`;
     const bizElementPresent = browser.element(bizElement).isVisible();
@@ -80,16 +93,17 @@ class YelpSearchResultsPage {
     }
   }
 
-  /*
-   * This method can be used to apply any filter that is defined in the scenario data table
-   * in the yelp_search feature.
-   * For each filter, a selector has to be defined and then the applyTableValues method has
-   * to be called.
-  */
+  /**
+   * @desc: applies the filters that are defined in the scenario data table in the 
+   *        yelp_search feature. 
+   * @var: priceSelector is the selector for the price filters
+   *       categorySelector is the selector for the category filters
+   * Note: For more filters, add the filter selector variable and call applyTableValues
+   *       for that filter.
+   */
   applyFilters(hashes) {
     this.allFiltersButton.waitForVisible(3000);
     this.allFiltersButton.click();
-
     for (const x in hashes) {
       const priceSelector = '.filter-set.price-filters .radio-check';
       const categorySelector = '.filter-set.category-filters .main .category.radio-check';
@@ -99,9 +113,14 @@ class YelpSearchResultsPage {
     }
   }
 
-  /*
-   *  This method applies the scenario table values to the filters
-  */
+  /**
+   * @desc: applies the scenario table values to the filters. If category filter is not visible
+   *        it is searched in the More Categories overlay.
+   * @var: selectedOption is the current filter that is being iterated
+   * @var: checkbxLabel is the label of the filter that is being iterated
+   * @var: moreCategorySelector is the selector for the category filters that appear on the 
+   *       More Categories overlay.
+   */
   applyTableValues(hashes, x, locator, hashKey, labelSelector) {
     if (hashes[x][hashKey] != null) {
       let selectedOption = false;
@@ -114,8 +133,8 @@ class YelpSearchResultsPage {
       });
       if (!selectedOption) {
         this.moreCategoriesLink.click();
-        const another = '#category-filters-content .category.radio-check';
-        this.applyTableValues(hashes, x, another, hashKey, labelSelector);
+        const moreCategorySelector = '#category-filters-content .category.radio-check';
+        this.applyTableValues(hashes, x, moreCategorySelector, hashKey, labelSelector);
         this.moreCategoryOverlySearchButton.click();
         this.waitForOverlayToFade();
       }
@@ -124,6 +143,10 @@ class YelpSearchResultsPage {
     }
   }
 
+  /**
+   * @desc: waits for the update results list overlay to fade. If it doesn't fade in
+   *        specified time (5s) then it logs an error.
+   */
   waitForOverlayToFade() {
     browser.waitUntil(function () {
       return browser.isVisible('.throbber-overlay:not([style*=none])') === false;
