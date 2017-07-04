@@ -18,11 +18,11 @@ exports.config = {
         // 'path/to/excluded/files'
     ],
     //
-    reporters: ['spec'],
+    reporters: ['spec', 'allure'],
     reporterOptions: {
-        // allure: {
-        //     outputDir: './src/allure_output_dir'
-        // }
+        allure: {
+            outputDir: 'allure-results'
+        }
     },
     // ============
     // Capabilities
