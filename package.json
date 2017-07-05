@@ -5,7 +5,7 @@
   "homepage": "https://github.com/webdriverio/cucumber-boilerplate",
   "scripts": {
     "clean": "rimraf allure-report && rimraf allure-results",
-    "test": "npm run clean && npm run test:wdio || npm run test:report",
+    "test": "npm run clean && (npm run test:wdio; exit 0;) && npm run test:report",
     "test:wdio": "wdio",
     "test:report": "allure generate && allure open"
   },
