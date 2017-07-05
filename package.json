@@ -4,13 +4,10 @@
   "description": "Boilerplate project to run WebdriverIO tests with Cucumber",
   "homepage": "https://github.com/webdriverio/cucumber-boilerplate",
   "scripts": {
-    "clean": "read -p \"Are you sure you want to clean the project? [y/n] \" -n 1 -r; if [[ $REPLY =~ ^[Yy]$ ]]; then sudo rm -R .git .github demo-app test .codeclimate.yml .travis.yml jest.json wdio.BUILD.conf.js src/features/**; fi",
-    "local-webserver": "http-server ./demo-app -s",
-    "test": "npm run test:validate && npm run test:unit && npm run test:features",
-    "test:features": "npm run-script local-webserver & (wdio wdio.BUILD.conf.js; wdio_ret=$?; kill $(lsof -t -i:8080); exit $wdio_ret)",
+    "clean": "rimraf allure-report && rimraf allure-results",
+    "test": "npm run clean && npm run test:wdio || npm run test:report",
     "test:wdio": "wdio",
-    "test:unit": "jest --config=jest.json",
-    "test:validate": "eslint 'src/**/*.js' 'test/**/*.js!(setup.js)'"
+    "test:report": "allure generate && allure open"
   },
   "repository": {
     "type": "git",
@@ -27,7 +24,9 @@
   ],
   "author": "Christian Bromann <christian@saucelabs.com>",
   "license": "MIT",
-  "dependencies": {},
+  "dependencies": {
+    "rimraf": "^2.6.1"
+  },
   "devDependencies": {
     "allure-commandline": "^2.1.1",
     "aria-query": "^0.7.0",

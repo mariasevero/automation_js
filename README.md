@@ -1,8 +1,8 @@
 Automation: Cucumber + WebdriverIO + JS
 ========================================
 
-## To run all features: ./node_modules/.bin/wdio
-## To run an specific feature: ./node_modules/.bin/wdio wdio.conf.js --spec ./src/features/[feature_name].feature
+Execute the following in the console.
+1. npm install
+2. npm run test
 
 ## Webdriver documentation: http://webdriver.io/
-
