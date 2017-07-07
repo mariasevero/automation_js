@@ -23,10 +23,13 @@ class YelpBusinessProfile {
     let address = this.bizAddressLabel.getText();
     address = address.split('\n');
 
-    console.log(`\n ******** BUSINESS INFORMATION FOR: ${this.bizNameTitle.getText()}  ********` +
-                `\n Address: ${address[0]}, ${address[1]
-                }\n Phone: ${this.bizPhoneLabel.getText()
-                }\n Website by text: ${this.bizWebsiteLink.getText()}`);
+    const business = {
+      title: this.bizNameTitle.getText(),
+      address: `${address[0]}, ${address[1]}`,
+      phone: this.bizPhoneLabel.getText(),
+      website: this.bizWebsiteLink.getText()
+    };
+    return business;
   }
 
   /**
@@ -36,20 +39,30 @@ class YelpBusinessProfile {
    */
   logCustomerReviews(numberOfReviews) {
     let ammountOfReviews = numberOfReviews;
-    console.log('\n-------- REVIEWS --------\n');
     
     if (ammountOfReviews > this.customerReviewList.value.length) {
-      console.log('There are not enough reviews for this business.');
+      let error ='There are not enough reviews for this business.';
       ammountOfReviews = this.customerReviewList.value.length;
+      return error;
     } else {
+      const reviews = [];
       for (let i = 0; i < numberOfReviews; i += 1) {
-        const customerReviewText = browser.elementIdText(this.customerReviewList.value[i].ELEMENT).value;
         const reviewNumber = i + 1;
-        console.log(`============================== Review ${reviewNumber} ==============================\n${
-                    customerReviewText}\n`);
+        const customerReviewText = browser.elementIdText(this.customerReviewList.value[i].ELEMENT).value;
+
+        const businessReviews = {
+          reviewNumber,
+          review: customerReviewText
+        };
+        reviews.push(businessReviews);
       }
+      return { reviews };
     }
+    
   }
+
+
+
 }
 
 module.exports = new YelpBusinessProfile();

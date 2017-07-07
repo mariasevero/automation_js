@@ -7,7 +7,16 @@ module.exports = function () {
   });
 
   this.Then(/^Console reports critical information of the restaurant$/, function () {
-    YelpBusinessProfile.logBusinessInfo();
-    YelpBusinessProfile.logCustomerReviews(3);  // Number of reviews to display: 3 (by document).
+    process.send({
+        event: 'runner:extra',
+        body: YelpBusinessProfile.logBusinessInfo()
+    });
+
+    process.send({
+      event: 'runner:extra',
+      body: YelpBusinessProfile.logCustomerReviews(3)  // Number of reviews to display: 3 (by document).
+    });
+
+    
   });
 };

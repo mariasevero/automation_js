@@ -1,3 +1,5 @@
+var CustomReporter = require('./src/reporter/CustomReporter.js');
+
 exports.config = {
     // ...
     //...
@@ -17,13 +19,10 @@ exports.config = {
     exclude: [
         // 'path/to/excluded/files'
     ],
-    //
-    reporters: ['spec', 'allure'],
-    reporterOptions: {
-        allure: {
-            outputDir: 'allure-results',
-        }
-    },
+
+    reporters: ['spec', CustomReporter],
+
+
     // ============
     // Capabilities
     // ============
