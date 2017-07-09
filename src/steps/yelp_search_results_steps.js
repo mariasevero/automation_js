@@ -15,11 +15,17 @@ module.exports = function () {
   });
 
   this.Then(/^Console reports total number of Search results with number of results in the current page$/, function () {
-    YelpSearchResultsPage.logNumberOfSearchResults();
+    process.send({
+      event: 'runner:extra',
+      body: YelpSearchResultsPage.logNumberOfSearchResults()
+    });
   });
 
   this.Then(/^Console reports the star rating of each of the results in the first result page$/, function () {
-    YelpSearchResultsPage.logStarRatingByBizName();
+    process.send({
+      event: 'runner:extra',
+      body: YelpSearchResultsPage.logStarRatingByBizName()
+    });
   });
 
   this.When(/^I click on the name of restaurant (\d+)$/, function (elementNumber) {

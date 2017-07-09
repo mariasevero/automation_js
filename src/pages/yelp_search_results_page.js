@@ -56,9 +56,12 @@ class YelpSearchResultsPage {
 
     paginationData.splice(0, 1, resultsPerPage[1]);
 
-    console.log('\n******** REPORT OF SEARCH RESULTS: NUMBER OF RESULTS ********' +
-                `\nTotal number of results: ${paginationData[0]}` +
-                `\nResults in the current page: ${paginationData[1]}`);
+    const numberOfResults = {
+      totalResults: `${paginationData[0]}`, 
+      pageResults: `${paginationData[1]}`
+    };
+
+    return numberOfResults;
   }
 
   /**
@@ -67,14 +70,26 @@ class YelpSearchResultsPage {
   logStarRatingByBizName() {
     const bizNameSelector = '.indexed-biz-name';
     const bizStarRating = "[class*='i-stars']";
+    const ratings = [];
 
     console.log('\n ******** REPORT OF SEARCH RESULTS: BUSINESS RATINGS ********');
     this.searchResult.value.forEach(function (element) {
       const title = browser.elementIdElement(element.ELEMENT, bizNameSelector).getText();
       const stars = browser.elementIdElement(element.ELEMENT, bizStarRating).getAttribute('title');
-      console.log(`${title}: ${stars}`);
+
+      const bizRating = {
+        title,
+        stars
+      };
+
+      ratings.push(bizRating);
     });
+
+    return { ratings };
   }
+
+
+
 
   /**
    * @desc: opens the business profile of a business which is selected by its position.
