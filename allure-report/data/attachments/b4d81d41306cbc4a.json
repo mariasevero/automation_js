@@ -1,0 +1,4 @@
+{
+    "using": "css selector",
+    "value": "[data-suggest-query='Restaurants'] .suggestion-title"
+}

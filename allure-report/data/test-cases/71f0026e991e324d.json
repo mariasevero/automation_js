@@ -1,0 +1,205 @@
+{
+  "uid" : "71f0026e991e324d",
+  "name" : "I select Restaurants",
+  "fullName" : "Report results information Report on Search Results Page.I select Restaurants",
+  "historyId" : "40e8da84323f09be892ce3609e40cd44",
+  "time" : {
+    "start" : 1499696447433,
+    "stop" : 1499696467954,
+    "duration" : 20521
+  },
+  "status" : "passed",
+  "description" : "",
+  "descriptionHtml" : "",
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "POST /wd/hub/session/1c945d64-ba4a-472e-8b47-87fb67b33158/element",
+      "time" : {
+        "start" : 1499696447435,
+        "stop" : 1499696447466,
+        "duration" : 31
+      },
+      "status" : "passed",
+      "hasContent" : true,
+      "stepsCount" : 0,
+      "attachmentsCount" : 2,
+      "steps" : [ ],
+      "attachments" : [ {
+        "uid" : "2eacd1094f6c480f",
+        "name" : "Request",
+        "source" : "2eacd1094f6c480f.json",
+        "type" : "application/json",
+        "size" : 47
+      }, {
+        "uid" : "5011d245b380f61a",
+        "name" : "Response",
+        "source" : "5011d245b380f61a.json",
+        "type" : "application/json",
+        "size" : 219
+      } ],
+      "parameters" : [ ]
+    }, {
+      "name" : "POST /wd/hub/session/1c945d64-ba4a-472e-8b47-87fb67b33158/element/0/click",
+      "time" : {
+        "start" : 1499696447481,
+        "stop" : 1499696447591,
+        "duration" : 110
+      },
+      "status" : "passed",
+      "hasContent" : true,
+      "stepsCount" : 0,
+      "attachmentsCount" : 1,
+      "steps" : [ ],
+      "attachments" : [ {
+        "uid" : "78bd0d3432b4a091",
+        "name" : "Response",
+        "source" : "78bd0d3432b4a091.json",
+        "type" : "application/json",
+        "size" : 195
+      } ],
+      "parameters" : [ ]
+    }, {
+      "name" : "POST /wd/hub/session/1c945d64-ba4a-472e-8b47-87fb67b33158/element",
+      "time" : {
+        "start" : 1499696447593,
+        "stop" : 1499696447622,
+        "duration" : 29
+      },
+      "status" : "passed",
+      "hasContent" : true,
+      "stepsCount" : 0,
+      "attachmentsCount" : 2,
+      "steps" : [ ],
+      "attachments" : [ {
+        "uid" : "6c571f091c8deb9",
+        "name" : "Request",
+        "source" : "6c571f091c8deb9.json",
+        "type" : "application/json",
+        "size" : 104
+      }, {
+        "uid" : "8a1b52df5faa1c0a",
+        "name" : "Response",
+        "source" : "8a1b52df5faa1c0a.json",
+        "type" : "application/json",
+        "size" : 221
+      } ],
+      "parameters" : [ ]
+    }, {
+      "name" : "POST /wd/hub/session/1c945d64-ba4a-472e-8b47-87fb67b33158/elements",
+      "time" : {
+        "start" : 1499696447627,
+        "stop" : 1499696447658,
+        "duration" : 31
+      },
+      "status" : "passed",
+      "hasContent" : true,
+      "stepsCount" : 0,
+      "attachmentsCount" : 2,
+      "steps" : [ ],
+      "attachments" : [ {
+        "uid" : "d3c7371ceaa97752",
+        "name" : "Request",
+        "source" : "d3c7371ceaa97752.json",
+        "type" : "application/json",
+        "size" : 104
+      }, {
+        "uid" : "552e5d2469a64397",
+        "name" : "Response",
+        "source" : "552e5d2469a64397.json",
+        "type" : "application/json",
+        "size" : 246
+      } ],
+      "parameters" : [ ]
+    }, {
+      "name" : "GET /wd/hub/session/1c945d64-ba4a-472e-8b47-87fb67b33158/element/1/displayed",
+      "time" : {
+        "start" : 1499696447660,
+        "stop" : 1499696447689,
+        "duration" : 29
+      },
+      "status" : "passed",
+      "hasContent" : true,
+      "stepsCount" : 0,
+      "attachmentsCount" : 1,
+      "steps" : [ ],
+      "attachments" : [ {
+        "uid" : "4874c115d69923a9",
+        "name" : "Response",
+        "source" : "4874c115d69923a9.json",
+        "type" : "application/json",
+        "size" : 195
+      } ],
+      "parameters" : [ ]
+    }, {
+      "name" : "POST /wd/hub/session/1c945d64-ba4a-472e-8b47-87fb67b33158/element",
+      "time" : {
+        "start" : 1499696447692,
+        "stop" : 1499696447722,
+        "duration" : 30
+      },
+      "status" : "passed",
+      "hasContent" : true,
+      "stepsCount" : 0,
+      "attachmentsCount" : 2,
+      "steps" : [ ],
+      "attachments" : [ {
+        "uid" : "b4d81d41306cbc4a",
+        "name" : "Request",
+        "source" : "b4d81d41306cbc4a.json",
+        "type" : "application/json",
+        "size" : 100
+      }, {
+        "uid" : "7dc8a826c1cf559",
+        "name" : "Response",
+        "source" : "7dc8a826c1cf559.json",
+        "type" : "application/json",
+        "size" : 221
+      } ],
+      "parameters" : [ ]
+    }, {
+      "name" : "POST /wd/hub/session/1c945d64-ba4a-472e-8b47-87fb67b33158/element/2/click",
+      "time" : {
+        "start" : 1499696447726,
+        "stop" : 1499696467953,
+        "duration" : 20227
+      },
+      "status" : "passed",
+      "hasContent" : true,
+      "stepsCount" : 0,
+      "attachmentsCount" : 1,
+      "steps" : [ ],
+      "attachments" : [ {
+        "uid" : "11ec604962f7c0dc",
+        "name" : "Response",
+        "source" : "11ec604962f7c0dc.json",
+        "type" : "application/json",
+        "size" : 196
+      } ],
+      "parameters" : [ ]
+    } ],
+    "hasContent" : true,
+    "stepsCount" : 7,
+    "attachmentsCount" : 11
+  },
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Report results information Report on Search Results Page"
+  }, {
+    "name" : "testClass",
+    "value" : "Report results information Report on Search Results Page"
+  }, {
+    "name" : "testMethod",
+    "value" : "I select Restaurants"
+  }, {
+    "name" : "package",
+    "value" : "Report results information Report on Search Results Page"
+  } ],
+  "parameters" : [ ],
+  "hidden" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ]
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "summary" : {
+    "reportName" : "Allure Report",
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 26,
+      "unknown" : 0,
+      "total" : 26
+    },
+    "time" : {
+      "minDuration" : 35,
+      "maxDuration" : 20677,
+      "sumDuration" : 118823,
+      "start" : 1499696376414,
+      "stop" : 1499696497504,
+      "duration" : 121090
+    }
+  },
+  "environment" : [ {
+    "values" : [ "{\"maxInstances\":1,\"browserName\":\"chrome\"}" ],
+    "name" : "capabilities"
+  }, {
+    "values" : [ "[\"/Users/macbookpro/Documents/Maz/automation_js/src/features/yelp_search_reports.feature\"]" ],
+    "name" : "spec files"
+  } ],
+  "history-trend" : [ {
+    "failed" : 0,
+    "broken" : 0,
+    "skipped" : 0,
+    "passed" : 26,
+    "unknown" : 0,
+    "total" : 26
+  } ],
+  "behaviors" : {
+    "total" : 0,
+    "items" : [ ]
+  },
+  "executors" : [ ],
+  "launches" : [ ]
+}

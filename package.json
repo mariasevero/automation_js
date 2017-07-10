@@ -7,7 +7,8 @@
     "clean": "rimraf allure-report && rimraf allure-results",
     "test": "npm run clean && (npm run test:wdio; exit 0;) && npm run test:report",
     "test:wdio": "wdio",
-    "test:report": "allure generate && allure open"
+    "test:report": "allure generate && allure open",
+    "serve": "http-server allure-report"
   },
   "repository": {
     "type": "git",
@@ -43,7 +44,7 @@
     "eslint-plugin-import": "^2.6.1",
     "eslint-plugin-jsx-a11y": "^5.1.0",
     "eslint-plugin-react": "^7.1.0",
-    "http-server": "~0.10.0",
+    "http-server": "^0.10.0",
     "jest": "~20.0.0",
     "wdio-allure-reporter": "^0.1.2",
     "wdio-cucumber-framework": "^0.2.17",

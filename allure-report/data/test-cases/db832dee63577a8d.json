@@ -1,0 +1,159 @@
+{
+  "uid" : "db832dee63577a8d",
+  "name" : "I add Pizza to the search",
+  "fullName" : "Search User searches a restaurant.I add Pizza to the search",
+  "historyId" : "fa627a100647ebe6a785496eb2fd6ef3",
+  "time" : {
+    "start" : 1499696409206,
+    "stop" : 1499696409558,
+    "duration" : 352
+  },
+  "status" : "passed",
+  "description" : "",
+  "descriptionHtml" : "",
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "POST /wd/hub/session/ed305f15-191b-43bb-8a30-285de480f7a3/element",
+      "time" : {
+        "start" : 1499696409207,
+        "stop" : 1499696409238,
+        "duration" : 31
+      },
+      "status" : "passed",
+      "hasContent" : true,
+      "stepsCount" : 0,
+      "attachmentsCount" : 2,
+      "steps" : [ ],
+      "attachments" : [ {
+        "uid" : "fe47826d1c8c85e1",
+        "name" : "Request",
+        "source" : "fe47826d1c8c85e1.json",
+        "type" : "application/json",
+        "size" : 47
+      }, {
+        "uid" : "33d1d706e0a9dab",
+        "name" : "Response",
+        "source" : "33d1d706e0a9dab.json",
+        "type" : "application/json",
+        "size" : 222
+      } ],
+      "parameters" : [ ]
+    }, {
+      "name" : "GET /wd/hub/session/ed305f15-191b-43bb-8a30-285de480f7a3/element/3/attribute/value",
+      "time" : {
+        "start" : 1499696409241,
+        "stop" : 1499696409258,
+        "duration" : 17
+      },
+      "status" : "passed",
+      "hasContent" : true,
+      "stepsCount" : 0,
+      "attachmentsCount" : 1,
+      "steps" : [ ],
+      "attachments" : [ {
+        "uid" : "e779a512d5fd1534",
+        "name" : "Response",
+        "source" : "e779a512d5fd1534.json",
+        "type" : "application/json",
+        "size" : 205
+      } ],
+      "parameters" : [ ]
+    }, {
+      "name" : "POST /wd/hub/session/ed305f15-191b-43bb-8a30-285de480f7a3/element",
+      "time" : {
+        "start" : 1499696409260,
+        "stop" : 1499696409276,
+        "duration" : 16
+      },
+      "status" : "passed",
+      "hasContent" : true,
+      "stepsCount" : 0,
+      "attachmentsCount" : 2,
+      "steps" : [ ],
+      "attachments" : [ {
+        "uid" : "9e6c14f545f37e5a",
+        "name" : "Request",
+        "source" : "9e6c14f545f37e5a.json",
+        "type" : "application/json",
+        "size" : 47
+      }, {
+        "uid" : "a9d392caef2943f1",
+        "name" : "Response",
+        "source" : "a9d392caef2943f1.json",
+        "type" : "application/json",
+        "size" : 221
+      } ],
+      "parameters" : [ ]
+    }, {
+      "name" : "POST /wd/hub/session/ed305f15-191b-43bb-8a30-285de480f7a3/element/3/clear",
+      "time" : {
+        "start" : 1499696409280,
+        "stop" : 1499696409342,
+        "duration" : 62
+      },
+      "status" : "passed",
+      "hasContent" : true,
+      "stepsCount" : 0,
+      "attachmentsCount" : 1,
+      "steps" : [ ],
+      "attachments" : [ {
+        "uid" : "7562a3d7d81d4da5",
+        "name" : "Response",
+        "source" : "7562a3d7d81d4da5.json",
+        "type" : "application/json",
+        "size" : 195
+      } ],
+      "parameters" : [ ]
+    }, {
+      "name" : "POST /wd/hub/session/ed305f15-191b-43bb-8a30-285de480f7a3/element/3/value",
+      "time" : {
+        "start" : 1499696409343,
+        "stop" : 1499696409555,
+        "duration" : 212
+      },
+      "status" : "passed",
+      "hasContent" : true,
+      "stepsCount" : 0,
+      "attachmentsCount" : 2,
+      "steps" : [ ],
+      "attachments" : [ {
+        "uid" : "b01f8ca5f10a13c0",
+        "name" : "Request",
+        "source" : "b01f8ca5f10a13c0.json",
+        "type" : "application/json",
+        "size" : 277
+      }, {
+        "uid" : "fc13a17a56d17063",
+        "name" : "Response",
+        "source" : "fc13a17a56d17063.json",
+        "type" : "application/json",
+        "size" : 196
+      } ],
+      "parameters" : [ ]
+    } ],
+    "hasContent" : true,
+    "stepsCount" : 5,
+    "attachmentsCount" : 8
+  },
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Search User searches a restaurant"
+  }, {
+    "name" : "testClass",
+    "value" : "Search User searches a restaurant"
+  }, {
+    "name" : "testMethod",
+    "value" : "I add Pizza to the search"
+  }, {
+    "name" : "package",
+    "value" : "Search User searches a restaurant"
+  } ],
+  "parameters" : [ ],
+  "hidden" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ]
+  }
+}

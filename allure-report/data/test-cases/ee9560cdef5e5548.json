@@ -1,0 +1,231 @@
+{
+  "uid" : "ee9560cdef5e5548",
+  "name" : "I click on the name of restaurant 1",
+  "fullName" : "Report results information Report critical information of a search result.I click on the name of restaurant 1",
+  "historyId" : "8658b6366b223be16fc1803854b0bb52",
+  "time" : {
+    "start" : 1499696484569,
+    "stop" : 1499696496862,
+    "duration" : 12293
+  },
+  "status" : "passed",
+  "description" : "",
+  "descriptionHtml" : "",
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "POST /wd/hub/session/1c945d64-ba4a-472e-8b47-87fb67b33158/element",
+      "time" : {
+        "start" : 1499696484572,
+        "stop" : 1499696484604,
+        "duration" : 32
+      },
+      "status" : "passed",
+      "hasContent" : true,
+      "stepsCount" : 0,
+      "attachmentsCount" : 2,
+      "steps" : [ ],
+      "attachments" : [ {
+        "uid" : "57265929c6964d7a",
+        "name" : "Request",
+        "source" : "57265929c6964d7a.json",
+        "type" : "application/json",
+        "size" : 62
+      }, {
+        "uid" : "554cf82afc83d377",
+        "name" : "Response",
+        "source" : "554cf82afc83d377.json",
+        "type" : "application/json",
+        "size" : 223
+      } ],
+      "parameters" : [ ]
+    }, {
+      "name" : "GET /wd/hub/session/1c945d64-ba4a-472e-8b47-87fb67b33158/element/46/displayed",
+      "time" : {
+        "start" : 1499696484608,
+        "stop" : 1499696484640,
+        "duration" : 32
+      },
+      "status" : "passed",
+      "hasContent" : true,
+      "stepsCount" : 0,
+      "attachmentsCount" : 1,
+      "steps" : [ ],
+      "attachments" : [ {
+        "uid" : "a46bdbcd05237bba",
+        "name" : "Response",
+        "source" : "a46bdbcd05237bba.json",
+        "type" : "application/json",
+        "size" : 196
+      } ],
+      "parameters" : [ ]
+    }, {
+      "name" : "POST /wd/hub/session/1c945d64-ba4a-472e-8b47-87fb67b33158/elements",
+      "time" : {
+        "start" : 1499696484641,
+        "stop" : 1499696484657,
+        "duration" : 16
+      },
+      "status" : "passed",
+      "hasContent" : true,
+      "stepsCount" : 0,
+      "attachmentsCount" : 2,
+      "steps" : [ ],
+      "attachments" : [ {
+        "uid" : "568f7a3bc4a23d6f",
+        "name" : "Request",
+        "source" : "568f7a3bc4a23d6f.json",
+        "type" : "application/json",
+        "size" : 84
+      }, {
+        "uid" : "fe0025fb40f52150",
+        "name" : "Response",
+        "source" : "fe0025fb40f52150.json",
+        "type" : "application/json",
+        "size" : 194
+      } ],
+      "parameters" : [ ]
+    }, {
+      "name" : "POST /wd/hub/session/1c945d64-ba4a-472e-8b47-87fb67b33158/element",
+      "time" : {
+        "start" : 1499696484659,
+        "stop" : 1499696484685,
+        "duration" : 26
+      },
+      "status" : "passed",
+      "hasContent" : true,
+      "stepsCount" : 0,
+      "attachmentsCount" : 2,
+      "steps" : [ ],
+      "attachments" : [ {
+        "uid" : "700105aa92cf8a5f",
+        "name" : "Request",
+        "source" : "700105aa92cf8a5f.json",
+        "type" : "application/json",
+        "size" : 80
+      }, {
+        "uid" : "a19fc6482a8f84a8",
+        "name" : "Response",
+        "source" : "a19fc6482a8f84a8.json",
+        "type" : "application/json",
+        "size" : 223
+      } ],
+      "parameters" : [ ]
+    }, {
+      "name" : "GET /wd/hub/session/1c945d64-ba4a-472e-8b47-87fb67b33158/element/47/location",
+      "time" : {
+        "start" : 1499696484685,
+        "stop" : 1499696484699,
+        "duration" : 14
+      },
+      "status" : "passed",
+      "hasContent" : true,
+      "stepsCount" : 0,
+      "attachmentsCount" : 1,
+      "steps" : [ ],
+      "attachments" : [ {
+        "uid" : "cc58305eee6d1be2",
+        "name" : "Response",
+        "source" : "cc58305eee6d1be2.json",
+        "type" : "application/json",
+        "size" : 309
+      } ],
+      "parameters" : [ ]
+    }, {
+      "name" : "POST /wd/hub/session/1c945d64-ba4a-472e-8b47-87fb67b33158/execute",
+      "time" : {
+        "start" : 1499696484699,
+        "stop" : 1499696484716,
+        "duration" : 17
+      },
+      "status" : "passed",
+      "hasContent" : true,
+      "stepsCount" : 0,
+      "attachmentsCount" : 2,
+      "steps" : [ ],
+      "attachments" : [ {
+        "uid" : "6d51462006f7c784",
+        "name" : "Request",
+        "source" : "6d51462006f7c784.json",
+        "type" : "application/json",
+        "size" : 159
+      }, {
+        "uid" : "c09538715e48db00",
+        "name" : "Response",
+        "source" : "c09538715e48db00.json",
+        "type" : "application/json",
+        "size" : 195
+      } ],
+      "parameters" : [ ]
+    }, {
+      "name" : "POST /wd/hub/session/1c945d64-ba4a-472e-8b47-87fb67b33158/element",
+      "time" : {
+        "start" : 1499696484719,
+        "stop" : 1499696484735,
+        "duration" : 16
+      },
+      "status" : "passed",
+      "hasContent" : true,
+      "stepsCount" : 0,
+      "attachmentsCount" : 2,
+      "steps" : [ ],
+      "attachments" : [ {
+        "uid" : "df56d3c1de176b6d",
+        "name" : "Request",
+        "source" : "df56d3c1de176b6d.json",
+        "type" : "application/json",
+        "size" : 80
+      }, {
+        "uid" : "bad66864419e5d5d",
+        "name" : "Response",
+        "source" : "bad66864419e5d5d.json",
+        "type" : "application/json",
+        "size" : 222
+      } ],
+      "parameters" : [ ]
+    }, {
+      "name" : "POST /wd/hub/session/1c945d64-ba4a-472e-8b47-87fb67b33158/element/47/click",
+      "time" : {
+        "start" : 1499696484736,
+        "stop" : 1499696496861,
+        "duration" : 12125
+      },
+      "status" : "passed",
+      "hasContent" : true,
+      "stepsCount" : 0,
+      "attachmentsCount" : 1,
+      "steps" : [ ],
+      "attachments" : [ {
+        "uid" : "c3c50d9e491cb394",
+        "name" : "Response",
+        "source" : "c3c50d9e491cb394.json",
+        "type" : "application/json",
+        "size" : 195
+      } ],
+      "parameters" : [ ]
+    } ],
+    "hasContent" : true,
+    "stepsCount" : 8,
+    "attachmentsCount" : 13
+  },
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Report results information Report critical information of a search result"
+  }, {
+    "name" : "testClass",
+    "value" : "Report results information Report critical information of a search result"
+  }, {
+    "name" : "testMethod",
+    "value" : "I click on the name of restaurant 1"
+  }, {
+    "name" : "package",
+    "value" : "Report results information Report critical information of a search result"
+  } ],
+  "parameters" : [ ],
+  "hidden" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ]
+  }
+}

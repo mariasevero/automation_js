@@ -1,0 +1,87 @@
+{
+  "uid" : "dd02ef1fa8d0da39",
+  "name" : "I click on \"Search\" button",
+  "fullName" : "Report results information Report critical information of a search result.I click on \"Search\" button",
+  "historyId" : "56acd2085bc32d7d76dc608ed55d6e20",
+  "time" : {
+    "start" : 1499696482327,
+    "stop" : 1499696482479,
+    "duration" : 152
+  },
+  "status" : "passed",
+  "description" : "",
+  "descriptionHtml" : "",
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "POST /wd/hub/session/1c945d64-ba4a-472e-8b47-87fb67b33158/element",
+      "time" : {
+        "start" : 1499696482327,
+        "stop" : 1499696482342,
+        "duration" : 15
+      },
+      "status" : "passed",
+      "hasContent" : true,
+      "stepsCount" : 0,
+      "attachmentsCount" : 2,
+      "steps" : [ ],
+      "attachments" : [ {
+        "uid" : "caaa1a691146ad29",
+        "name" : "Request",
+        "source" : "caaa1a691146ad29.json",
+        "type" : "application/json",
+        "size" : 58
+      }, {
+        "uid" : "548581e801ca605b",
+        "name" : "Response",
+        "source" : "548581e801ca605b.json",
+        "type" : "application/json",
+        "size" : 223
+      } ],
+      "parameters" : [ ]
+    }, {
+      "name" : "POST /wd/hub/session/1c945d64-ba4a-472e-8b47-87fb67b33158/element/42/click",
+      "time" : {
+        "start" : 1499696482345,
+        "stop" : 1499696482479,
+        "duration" : 134
+      },
+      "status" : "passed",
+      "hasContent" : true,
+      "stepsCount" : 0,
+      "attachmentsCount" : 1,
+      "steps" : [ ],
+      "attachments" : [ {
+        "uid" : "7b942f1444833d98",
+        "name" : "Response",
+        "source" : "7b942f1444833d98.json",
+        "type" : "application/json",
+        "size" : 196
+      } ],
+      "parameters" : [ ]
+    } ],
+    "hasContent" : true,
+    "stepsCount" : 2,
+    "attachmentsCount" : 3
+  },
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Report results information Report critical information of a search result"
+  }, {
+    "name" : "testClass",
+    "value" : "Report results information Report critical information of a search result"
+  }, {
+    "name" : "testMethod",
+    "value" : "I click on \"Search\" button"
+  }, {
+    "name" : "package",
+    "value" : "Report results information Report critical information of a search result"
+  } ],
+  "parameters" : [ ],
+  "hidden" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ]
+  }
+}

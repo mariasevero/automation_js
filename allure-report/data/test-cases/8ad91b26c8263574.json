@@ -1,0 +1,67 @@
+{
+  "uid" : "8ad91b26c8263574",
+  "name" : "I open the url \"https://www.yelp.com\"",
+  "fullName" : "Search User applies filters.I open the url \"https://www.yelp.com\"",
+  "historyId" : "b7d30872c9945af7f96ca5fe99719c9",
+  "time" : {
+    "start" : 1499696411891,
+    "stop" : 1499696414439,
+    "duration" : 2548
+  },
+  "status" : "passed",
+  "description" : "",
+  "descriptionHtml" : "",
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "POST /wd/hub/session/ed305f15-191b-43bb-8a30-285de480f7a3/url",
+      "time" : {
+        "start" : 1499696411891,
+        "stop" : 1499696414438,
+        "duration" : 2547
+      },
+      "status" : "passed",
+      "hasContent" : true,
+      "stepsCount" : 0,
+      "attachmentsCount" : 2,
+      "steps" : [ ],
+      "attachments" : [ {
+        "uid" : "e906f0016b3b376",
+        "name" : "Request",
+        "source" : "e906f0016b3b376.json",
+        "type" : "application/json",
+        "size" : 37
+      }, {
+        "uid" : "b549a8b96f1dcba1",
+        "name" : "Response",
+        "source" : "b549a8b96f1dcba1.json",
+        "type" : "application/json",
+        "size" : 196
+      } ],
+      "parameters" : [ ]
+    } ],
+    "hasContent" : true,
+    "stepsCount" : 1,
+    "attachmentsCount" : 2
+  },
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Search User applies filters"
+  }, {
+    "name" : "testClass",
+    "value" : "Search User applies filters"
+  }, {
+    "name" : "testMethod",
+    "value" : "I open the url \"https://www.yelp.com\""
+  }, {
+    "name" : "package",
+    "value" : "Search User applies filters"
+  } ],
+  "parameters" : [ ],
+  "hidden" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ]
+  }
+}

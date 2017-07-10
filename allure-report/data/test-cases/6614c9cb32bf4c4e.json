@@ -1,0 +1,67 @@
+{
+  "uid" : "6614c9cb32bf4c4e",
+  "name" : "I open the url \"https://www.yelp.com\"",
+  "fullName" : "Search User searches a restaurant.I open the url \"https://www.yelp.com\"",
+  "historyId" : "3b6e90e0d18a7d0178df030637a55ba8",
+  "time" : {
+    "start" : 1499696376414,
+    "stop" : 1499696388528,
+    "duration" : 12114
+  },
+  "status" : "passed",
+  "description" : "",
+  "descriptionHtml" : "",
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "POST /wd/hub/session/ed305f15-191b-43bb-8a30-285de480f7a3/url",
+      "time" : {
+        "start" : 1499696376418,
+        "stop" : 1499696388522,
+        "duration" : 12104
+      },
+      "status" : "passed",
+      "hasContent" : true,
+      "stepsCount" : 0,
+      "attachmentsCount" : 2,
+      "steps" : [ ],
+      "attachments" : [ {
+        "uid" : "dcd26ca0cefa5664",
+        "name" : "Request",
+        "source" : "dcd26ca0cefa5664.json",
+        "type" : "application/json",
+        "size" : 37
+      }, {
+        "uid" : "ab81a0c065a7854f",
+        "name" : "Response",
+        "source" : "ab81a0c065a7854f.json",
+        "type" : "application/json",
+        "size" : 196
+      } ],
+      "parameters" : [ ]
+    } ],
+    "hasContent" : true,
+    "stepsCount" : 1,
+    "attachmentsCount" : 2
+  },
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Search User searches a restaurant"
+  }, {
+    "name" : "testClass",
+    "value" : "Search User searches a restaurant"
+  }, {
+    "name" : "testMethod",
+    "value" : "I open the url \"https://www.yelp.com\""
+  }, {
+    "name" : "package",
+    "value" : "Search User searches a restaurant"
+  } ],
+  "parameters" : [ ],
+  "hidden" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ]
+  }
+}

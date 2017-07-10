@@ -1,0 +1,67 @@
+{
+  "uid" : "4311af35c7dd8250",
+  "name" : "I open the url \"https://www.yelp.com\"",
+  "fullName" : "Report results information Report critical information of a search result.I open the url \"https://www.yelp.com\"",
+  "historyId" : "27d3cae7157dc0287ba1770ee822a7ae",
+  "time" : {
+    "start" : 1499696472369,
+    "stop" : 1499696474873,
+    "duration" : 2504
+  },
+  "status" : "passed",
+  "description" : "",
+  "descriptionHtml" : "",
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "POST /wd/hub/session/1c945d64-ba4a-472e-8b47-87fb67b33158/url",
+      "time" : {
+        "start" : 1499696472369,
+        "stop" : 1499696474872,
+        "duration" : 2503
+      },
+      "status" : "passed",
+      "hasContent" : true,
+      "stepsCount" : 0,
+      "attachmentsCount" : 2,
+      "steps" : [ ],
+      "attachments" : [ {
+        "uid" : "8d7195f227905299",
+        "name" : "Request",
+        "source" : "8d7195f227905299.json",
+        "type" : "application/json",
+        "size" : 37
+      }, {
+        "uid" : "263823f783befe0f",
+        "name" : "Response",
+        "source" : "263823f783befe0f.json",
+        "type" : "application/json",
+        "size" : 195
+      } ],
+      "parameters" : [ ]
+    } ],
+    "hasContent" : true,
+    "stepsCount" : 1,
+    "attachmentsCount" : 2
+  },
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Report results information Report critical information of a search result"
+  }, {
+    "name" : "testClass",
+    "value" : "Report results information Report critical information of a search result"
+  }, {
+    "name" : "testMethod",
+    "value" : "I open the url \"https://www.yelp.com\""
+  }, {
+    "name" : "package",
+    "value" : "Report results information Report critical information of a search result"
+  } ],
+  "parameters" : [ ],
+  "hidden" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ]
+  }
+}

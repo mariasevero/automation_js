@@ -1,0 +1,87 @@
+{
+  "uid" : "9ddf33e0694f0078",
+  "name" : "I click on \"Search\" button",
+  "fullName" : "Report results information Report on Search Results Page.I click on \"Search\" button",
+  "historyId" : "92ad27d31c410986cf8c1117e9a4e87a",
+  "time" : {
+    "start" : 1499696468323,
+    "stop" : 1499696468500,
+    "duration" : 177
+  },
+  "status" : "passed",
+  "description" : "",
+  "descriptionHtml" : "",
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "POST /wd/hub/session/1c945d64-ba4a-472e-8b47-87fb67b33158/element",
+      "time" : {
+        "start" : 1499696468324,
+        "stop" : 1499696468352,
+        "duration" : 28
+      },
+      "status" : "passed",
+      "hasContent" : true,
+      "stepsCount" : 0,
+      "attachmentsCount" : 2,
+      "steps" : [ ],
+      "attachments" : [ {
+        "uid" : "5b785b25ec6ba093",
+        "name" : "Request",
+        "source" : "5b785b25ec6ba093.json",
+        "type" : "application/json",
+        "size" : 58
+      }, {
+        "uid" : "c1b0e04f95608c01",
+        "name" : "Response",
+        "source" : "c1b0e04f95608c01.json",
+        "type" : "application/json",
+        "size" : 222
+      } ],
+      "parameters" : [ ]
+    }, {
+      "name" : "POST /wd/hub/session/1c945d64-ba4a-472e-8b47-87fb67b33158/element/4/click",
+      "time" : {
+        "start" : 1499696468358,
+        "stop" : 1499696468499,
+        "duration" : 141
+      },
+      "status" : "passed",
+      "hasContent" : true,
+      "stepsCount" : 0,
+      "attachmentsCount" : 1,
+      "steps" : [ ],
+      "attachments" : [ {
+        "uid" : "779f330e919dc6ab",
+        "name" : "Response",
+        "source" : "779f330e919dc6ab.json",
+        "type" : "application/json",
+        "size" : 195
+      } ],
+      "parameters" : [ ]
+    } ],
+    "hasContent" : true,
+    "stepsCount" : 2,
+    "attachmentsCount" : 3
+  },
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Report results information Report on Search Results Page"
+  }, {
+    "name" : "testClass",
+    "value" : "Report results information Report on Search Results Page"
+  }, {
+    "name" : "testMethod",
+    "value" : "I click on \"Search\" button"
+  }, {
+    "name" : "package",
+    "value" : "Report results information Report on Search Results Page"
+  } ],
+  "parameters" : [ ],
+  "hidden" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ]
+  }
+}

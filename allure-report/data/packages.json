@@ -1,0 +1,389 @@
+{
+  "statistic" : {
+    "failed" : 0,
+    "broken" : 0,
+    "skipped" : 0,
+    "passed" : 26,
+    "unknown" : 0,
+    "total" : 26
+  },
+  "time" : {
+    "minDuration" : 35,
+    "maxDuration" : 20677,
+    "sumDuration" : 118823,
+    "start" : 1499696376414,
+    "stop" : 1499696497504,
+    "duration" : 121090
+  },
+  "children" : [ {
+    "uid" : "d74b88ce226669eb",
+    "name" : "Report results information Report critical information of a search result",
+    "time" : {
+      "minDuration" : 119,
+      "maxDuration" : 12293,
+      "sumDuration" : 25133,
+      "start" : 1499696472369,
+      "stop" : 1499696497504,
+      "duration" : 25135
+    },
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 8,
+      "unknown" : 0,
+      "total" : 8
+    },
+    "type" : "TestGroupNode",
+    "children" : [ {
+      "uid" : "46ed797b74fb6ff",
+      "name" : "I select Restaurants",
+      "time" : {
+        "start" : 1499696474873,
+        "stop" : 1499696482025,
+        "duration" : 7152
+      },
+      "status" : "passed",
+      "flaky" : false,
+      "type" : "TestCaseNode"
+    }, {
+      "uid" : "4311af35c7dd8250",
+      "name" : "I open the url \"https://www.yelp.com\"",
+      "time" : {
+        "start" : 1499696472369,
+        "stop" : 1499696474873,
+        "duration" : 2504
+      },
+      "status" : "passed",
+      "flaky" : false,
+      "type" : "TestCaseNode"
+    }, {
+      "uid" : "f57fcf991f92bdae",
+      "name" : "I add Pizza to the search",
+      "time" : {
+        "start" : 1499696482025,
+        "stop" : 1499696482326,
+        "duration" : 301
+      },
+      "status" : "passed",
+      "flaky" : false,
+      "type" : "TestCaseNode"
+    }, {
+      "uid" : "6faebe38799fcf8f",
+      "name" : "Business profile is opened",
+      "time" : {
+        "start" : 1499696496862,
+        "stop" : 1499696496981,
+        "duration" : 119
+      },
+      "status" : "passed",
+      "flaky" : false,
+      "type" : "TestCaseNode"
+    }, {
+      "uid" : "dd02ef1fa8d0da39",
+      "name" : "I click on \"Search\" button",
+      "time" : {
+        "start" : 1499696482327,
+        "stop" : 1499696482479,
+        "duration" : 152
+      },
+      "status" : "passed",
+      "flaky" : false,
+      "type" : "TestCaseNode"
+    }, {
+      "uid" : "ee9560cdef5e5548",
+      "name" : "I click on the name of restaurant 1",
+      "time" : {
+        "start" : 1499696484569,
+        "stop" : 1499696496862,
+        "duration" : 12293
+      },
+      "status" : "passed",
+      "flaky" : false,
+      "type" : "TestCaseNode"
+    }, {
+      "uid" : "e61958e107207eeb",
+      "name" : "A list of restaurants is displayed",
+      "time" : {
+        "start" : 1499696482480,
+        "stop" : 1499696484569,
+        "duration" : 2089
+      },
+      "status" : "passed",
+      "flaky" : false,
+      "type" : "TestCaseNode"
+    }, {
+      "uid" : "9a04f56d1a39ced1",
+      "name" : "Console reports critical information of the restaurant",
+      "time" : {
+        "start" : 1499696496981,
+        "stop" : 1499696497504,
+        "duration" : 523
+      },
+      "status" : "passed",
+      "flaky" : false,
+      "type" : "TestCaseNode"
+    } ]
+  }, {
+    "uid" : "933446a0ff7d7d08",
+    "name" : "Report results information Report on Search Results Page",
+    "time" : {
+      "minDuration" : 35,
+      "maxDuration" : 20521,
+      "sumDuration" : 35647,
+      "start" : 1499696436684,
+      "stop" : 1499696472334,
+      "duration" : 35650
+    },
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 7,
+      "unknown" : 0,
+      "total" : 7
+    },
+    "type" : "TestGroupNode",
+    "children" : [ {
+      "uid" : "c46ba6ccc06539ae",
+      "name" : "Console reports total number of Search results with number of results in the current page",
+      "time" : {
+        "start" : 1499696470722,
+        "stop" : 1499696470757,
+        "duration" : 35
+      },
+      "status" : "passed",
+      "flaky" : false,
+      "type" : "TestCaseNode"
+    }, {
+      "uid" : "b34d20d34d4e3431",
+      "name" : "Console reports the star rating of each of the results in the first result page",
+      "time" : {
+        "start" : 1499696470758,
+        "stop" : 1499696472334,
+        "duration" : 1576
+      },
+      "status" : "passed",
+      "flaky" : false,
+      "type" : "TestCaseNode"
+    }, {
+      "uid" : "71f0026e991e324d",
+      "name" : "I select Restaurants",
+      "time" : {
+        "start" : 1499696447433,
+        "stop" : 1499696467954,
+        "duration" : 20521
+      },
+      "status" : "passed",
+      "flaky" : false,
+      "type" : "TestCaseNode"
+    }, {
+      "uid" : "53b5898ff505a2a3",
+      "name" : "A list of restaurants is displayed",
+      "time" : {
+        "start" : 1499696468501,
+        "stop" : 1499696470721,
+        "duration" : 2220
+      },
+      "status" : "passed",
+      "flaky" : false,
+      "type" : "TestCaseNode"
+    }, {
+      "uid" : "564d7285cb9fbd4f",
+      "name" : "I add Pizza to the search",
+      "time" : {
+        "start" : 1499696467954,
+        "stop" : 1499696468323,
+        "duration" : 369
+      },
+      "status" : "passed",
+      "flaky" : false,
+      "type" : "TestCaseNode"
+    }, {
+      "uid" : "9ddf33e0694f0078",
+      "name" : "I click on \"Search\" button",
+      "time" : {
+        "start" : 1499696468323,
+        "stop" : 1499696468500,
+        "duration" : 177
+      },
+      "status" : "passed",
+      "flaky" : false,
+      "type" : "TestCaseNode"
+    }, {
+      "uid" : "aba5b1a357684b11",
+      "name" : "I open the url \"https://www.yelp.com\"",
+      "time" : {
+        "start" : 1499696436684,
+        "stop" : 1499696447433,
+        "duration" : 10749
+      },
+      "status" : "passed",
+      "flaky" : false,
+      "type" : "TestCaseNode"
+    } ]
+  }, {
+    "uid" : "ef59b3b70870c32b",
+    "name" : "Search User applies filters",
+    "time" : {
+      "minDuration" : 161,
+      "maxDuration" : 10163,
+      "sumDuration" : 22611,
+      "start" : 1499696411891,
+      "stop" : 1499696434505,
+      "duration" : 22614
+    },
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 6,
+      "unknown" : 0,
+      "total" : 6
+    },
+    "type" : "TestGroupNode",
+    "children" : [ {
+      "uid" : "b367baf0c3a34a72",
+      "name" : "I click on \"Search\" button",
+      "time" : {
+        "start" : 1499696422068,
+        "stop" : 1499696422229,
+        "duration" : 161
+      },
+      "status" : "passed",
+      "flaky" : false,
+      "type" : "TestCaseNode"
+    }, {
+      "uid" : "b2a98f5ef8c5ea60",
+      "name" : "I select Restaurants",
+      "time" : {
+        "start" : 1499696414439,
+        "stop" : 1499696421756,
+        "duration" : 7317
+      },
+      "status" : "passed",
+      "flaky" : false,
+      "type" : "TestCaseNode"
+    }, {
+      "uid" : "ed4a2544b802bfb0",
+      "name" : "I add Pizza to the search",
+      "time" : {
+        "start" : 1499696421757,
+        "stop" : 1499696422068,
+        "duration" : 311
+      },
+      "status" : "passed",
+      "flaky" : false,
+      "type" : "TestCaseNode"
+    }, {
+      "uid" : "1db789380e9e282a",
+      "name" : "A list of restaurants is displayed",
+      "time" : {
+        "start" : 1499696422230,
+        "stop" : 1499696424341,
+        "duration" : 2111
+      },
+      "status" : "passed",
+      "flaky" : false,
+      "type" : "TestCaseNode"
+    }, {
+      "uid" : "8ad91b26c8263574",
+      "name" : "I open the url \"https://www.yelp.com\"",
+      "time" : {
+        "start" : 1499696411891,
+        "stop" : 1499696414439,
+        "duration" : 2548
+      },
+      "status" : "passed",
+      "flaky" : false,
+      "type" : "TestCaseNode"
+    }, {
+      "uid" : "927a9ef69ced6cf5",
+      "name" : "I apply filters",
+      "time" : {
+        "start" : 1499696424342,
+        "stop" : 1499696434505,
+        "duration" : 10163
+      },
+      "status" : "passed",
+      "flaky" : false,
+      "type" : "TestCaseNode"
+    } ]
+  }, {
+    "uid" : "646c9c10c5f3c118",
+    "name" : "Search User searches a restaurant",
+    "time" : {
+      "minDuration" : 181,
+      "maxDuration" : 20677,
+      "sumDuration" : 35432,
+      "start" : 1499696376414,
+      "stop" : 1499696411848,
+      "duration" : 35434
+    },
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 5,
+      "unknown" : 0,
+      "total" : 5
+    },
+    "type" : "TestGroupNode",
+    "children" : [ {
+      "uid" : "547d9a543928f91f",
+      "name" : "I click on \"Search\" button",
+      "time" : {
+        "start" : 1499696409558,
+        "stop" : 1499696409739,
+        "duration" : 181
+      },
+      "status" : "passed",
+      "flaky" : false,
+      "type" : "TestCaseNode"
+    }, {
+      "uid" : "3f83523f9f939871",
+      "name" : "A list of restaurants is displayed",
+      "time" : {
+        "start" : 1499696409740,
+        "stop" : 1499696411848,
+        "duration" : 2108
+      },
+      "status" : "passed",
+      "flaky" : false,
+      "type" : "TestCaseNode"
+    }, {
+      "uid" : "5eb7c3d2a270a270",
+      "name" : "I select Restaurants",
+      "time" : {
+        "start" : 1499696388529,
+        "stop" : 1499696409206,
+        "duration" : 20677
+      },
+      "status" : "passed",
+      "flaky" : false,
+      "type" : "TestCaseNode"
+    }, {
+      "uid" : "6614c9cb32bf4c4e",
+      "name" : "I open the url \"https://www.yelp.com\"",
+      "time" : {
+        "start" : 1499696376414,
+        "stop" : 1499696388528,
+        "duration" : 12114
+      },
+      "status" : "passed",
+      "flaky" : false,
+      "type" : "TestCaseNode"
+    }, {
+      "uid" : "db832dee63577a8d",
+      "name" : "I add Pizza to the search",
+      "time" : {
+        "start" : 1499696409206,
+        "stop" : 1499696409558,
+        "duration" : 352
+      },
+      "status" : "passed",
+      "flaky" : false,
+      "type" : "TestCaseNode"
+    } ]
+  } ]
+}

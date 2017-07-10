@@ -1,0 +1,93 @@
+{
+  "uid" : "c46ba6ccc06539ae",
+  "name" : "Console reports total number of Search results with number of results in the current page",
+  "fullName" : "Report results information Report on Search Results Page.Console reports total number of Search results with number of results in the current page",
+  "historyId" : "6cc63eaafe53d1f50734318bdbf51cf7",
+  "time" : {
+    "start" : 1499696470722,
+    "stop" : 1499696470757,
+    "duration" : 35
+  },
+  "status" : "passed",
+  "description" : "",
+  "descriptionHtml" : "",
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "POST /wd/hub/session/1c945d64-ba4a-472e-8b47-87fb67b33158/execute",
+      "time" : {
+        "start" : 1499696470727,
+        "stop" : 1499696470740,
+        "duration" : 13
+      },
+      "status" : "passed",
+      "hasContent" : true,
+      "stepsCount" : 0,
+      "attachmentsCount" : 2,
+      "steps" : [ ],
+      "attachments" : [ {
+        "uid" : "fe0180a068947fb6",
+        "name" : "Request",
+        "source" : "fe0180a068947fb6.json",
+        "type" : "application/json",
+        "size" : 63
+      }, {
+        "uid" : "73ed5e4fd2e2e45c",
+        "name" : "Response",
+        "source" : "73ed5e4fd2e2e45c.json",
+        "type" : "application/json",
+        "size" : 196
+      } ],
+      "parameters" : [ ]
+    }, {
+      "name" : "POST /wd/hub/session/1c945d64-ba4a-472e-8b47-87fb67b33158/execute",
+      "time" : {
+        "start" : 1499696470740,
+        "stop" : 1499696470755,
+        "duration" : 15
+      },
+      "status" : "passed",
+      "hasContent" : true,
+      "stepsCount" : 0,
+      "attachmentsCount" : 2,
+      "steps" : [ ],
+      "attachments" : [ {
+        "uid" : "f55991dfc2d778a6",
+        "name" : "Request",
+        "source" : "f55991dfc2d778a6.json",
+        "type" : "application/json",
+        "size" : 2225
+      }, {
+        "uid" : "600e00cd44c15cf",
+        "name" : "Response",
+        "source" : "600e00cd44c15cf.json",
+        "type" : "application/json",
+        "size" : 254
+      } ],
+      "parameters" : [ ]
+    } ],
+    "hasContent" : true,
+    "stepsCount" : 2,
+    "attachmentsCount" : 4
+  },
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Report results information Report on Search Results Page"
+  }, {
+    "name" : "testClass",
+    "value" : "Report results information Report on Search Results Page"
+  }, {
+    "name" : "testMethod",
+    "value" : "Console reports total number of Search results with number of results in the current page"
+  }, {
+    "name" : "package",
+    "value" : "Report results information Report on Search Results Page"
+  } ],
+  "parameters" : [ ],
+  "hidden" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ]
+  }
+}

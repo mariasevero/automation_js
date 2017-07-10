@@ -1,0 +1,4 @@
+{
+    "using": "css selector",
+    "value": ".review.review--with-sidebar .review-content p"
+}

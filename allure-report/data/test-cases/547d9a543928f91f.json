@@ -1,0 +1,87 @@
+{
+  "uid" : "547d9a543928f91f",
+  "name" : "I click on \"Search\" button",
+  "fullName" : "Search User searches a restaurant.I click on \"Search\" button",
+  "historyId" : "60161e957221533687cbb2ba310d44c7",
+  "time" : {
+    "start" : 1499696409558,
+    "stop" : 1499696409739,
+    "duration" : 181
+  },
+  "status" : "passed",
+  "description" : "",
+  "descriptionHtml" : "",
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "POST /wd/hub/session/ed305f15-191b-43bb-8a30-285de480f7a3/element",
+      "time" : {
+        "start" : 1499696409560,
+        "stop" : 1499696409592,
+        "duration" : 32
+      },
+      "status" : "passed",
+      "hasContent" : true,
+      "stepsCount" : 0,
+      "attachmentsCount" : 2,
+      "steps" : [ ],
+      "attachments" : [ {
+        "uid" : "fe0b3c5771c7a1c5",
+        "name" : "Request",
+        "source" : "fe0b3c5771c7a1c5.json",
+        "type" : "application/json",
+        "size" : 58
+      }, {
+        "uid" : "7b077ca443ed45f2",
+        "name" : "Response",
+        "source" : "7b077ca443ed45f2.json",
+        "type" : "application/json",
+        "size" : 221
+      } ],
+      "parameters" : [ ]
+    }, {
+      "name" : "POST /wd/hub/session/ed305f15-191b-43bb-8a30-285de480f7a3/element/4/click",
+      "time" : {
+        "start" : 1499696409599,
+        "stop" : 1499696409739,
+        "duration" : 140
+      },
+      "status" : "passed",
+      "hasContent" : true,
+      "stepsCount" : 0,
+      "attachmentsCount" : 1,
+      "steps" : [ ],
+      "attachments" : [ {
+        "uid" : "59ecba715c5463e5",
+        "name" : "Response",
+        "source" : "59ecba715c5463e5.json",
+        "type" : "application/json",
+        "size" : 196
+      } ],
+      "parameters" : [ ]
+    } ],
+    "hasContent" : true,
+    "stepsCount" : 2,
+    "attachmentsCount" : 3
+  },
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Search User searches a restaurant"
+  }, {
+    "name" : "testClass",
+    "value" : "Search User searches a restaurant"
+  }, {
+    "name" : "testMethod",
+    "value" : "I click on \"Search\" button"
+  }, {
+    "name" : "package",
+    "value" : "Search User searches a restaurant"
+  } ],
+  "parameters" : [ ],
+  "hidden" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ]
+  }
+}

@@ -1,0 +1,4 @@
+{
+    "using": "css selector",
+    "value": "#super-container [class*=search-results-block] .search-results-content"
+}

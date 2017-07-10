@@ -1,0 +1,159 @@
+{
+  "uid" : "ed4a2544b802bfb0",
+  "name" : "I add Pizza to the search",
+  "fullName" : "Search User applies filters.I add Pizza to the search",
+  "historyId" : "566eb04f7ad211ab407b22c170b29f47",
+  "time" : {
+    "start" : 1499696421757,
+    "stop" : 1499696422068,
+    "duration" : 311
+  },
+  "status" : "passed",
+  "description" : "",
+  "descriptionHtml" : "",
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "POST /wd/hub/session/ed305f15-191b-43bb-8a30-285de480f7a3/element",
+      "time" : {
+        "start" : 1499696421758,
+        "stop" : 1499696421773,
+        "duration" : 15
+      },
+      "status" : "passed",
+      "hasContent" : true,
+      "stepsCount" : 0,
+      "attachmentsCount" : 2,
+      "steps" : [ ],
+      "attachments" : [ {
+        "uid" : "177db489e3da6d00",
+        "name" : "Request",
+        "source" : "177db489e3da6d00.json",
+        "type" : "application/json",
+        "size" : 47
+      }, {
+        "uid" : "1bc6232d9e64a0a6",
+        "name" : "Response",
+        "source" : "1bc6232d9e64a0a6.json",
+        "type" : "application/json",
+        "size" : 221
+      } ],
+      "parameters" : [ ]
+    }, {
+      "name" : "GET /wd/hub/session/ed305f15-191b-43bb-8a30-285de480f7a3/element/11/attribute/value",
+      "time" : {
+        "start" : 1499696421777,
+        "stop" : 1499696421792,
+        "duration" : 15
+      },
+      "status" : "passed",
+      "hasContent" : true,
+      "stepsCount" : 0,
+      "attachmentsCount" : 1,
+      "steps" : [ ],
+      "attachments" : [ {
+        "uid" : "911ff70a126d9420",
+        "name" : "Response",
+        "source" : "911ff70a126d9420.json",
+        "type" : "application/json",
+        "size" : 205
+      } ],
+      "parameters" : [ ]
+    }, {
+      "name" : "POST /wd/hub/session/ed305f15-191b-43bb-8a30-285de480f7a3/element",
+      "time" : {
+        "start" : 1499696421793,
+        "stop" : 1499696421809,
+        "duration" : 16
+      },
+      "status" : "passed",
+      "hasContent" : true,
+      "stepsCount" : 0,
+      "attachmentsCount" : 2,
+      "steps" : [ ],
+      "attachments" : [ {
+        "uid" : "bd634bae4805b530",
+        "name" : "Request",
+        "source" : "bd634bae4805b530.json",
+        "type" : "application/json",
+        "size" : 47
+      }, {
+        "uid" : "25be36e9ffc8420b",
+        "name" : "Response",
+        "source" : "25be36e9ffc8420b.json",
+        "type" : "application/json",
+        "size" : 222
+      } ],
+      "parameters" : [ ]
+    }, {
+      "name" : "POST /wd/hub/session/ed305f15-191b-43bb-8a30-285de480f7a3/element/11/clear",
+      "time" : {
+        "start" : 1499696421813,
+        "stop" : 1499696421868,
+        "duration" : 55
+      },
+      "status" : "passed",
+      "hasContent" : true,
+      "stepsCount" : 0,
+      "attachmentsCount" : 1,
+      "steps" : [ ],
+      "attachments" : [ {
+        "uid" : "c53375b02cd8ecc",
+        "name" : "Response",
+        "source" : "c53375b02cd8ecc.json",
+        "type" : "application/json",
+        "size" : 196
+      } ],
+      "parameters" : [ ]
+    }, {
+      "name" : "POST /wd/hub/session/ed305f15-191b-43bb-8a30-285de480f7a3/element/11/value",
+      "time" : {
+        "start" : 1499696421868,
+        "stop" : 1499696422067,
+        "duration" : 199
+      },
+      "status" : "passed",
+      "hasContent" : true,
+      "stepsCount" : 0,
+      "attachmentsCount" : 2,
+      "steps" : [ ],
+      "attachments" : [ {
+        "uid" : "3365f17657e9779e",
+        "name" : "Request",
+        "source" : "3365f17657e9779e.json",
+        "type" : "application/json",
+        "size" : 277
+      }, {
+        "uid" : "eb72d747a6c9e1a1",
+        "name" : "Response",
+        "source" : "eb72d747a6c9e1a1.json",
+        "type" : "application/json",
+        "size" : 195
+      } ],
+      "parameters" : [ ]
+    } ],
+    "hasContent" : true,
+    "stepsCount" : 5,
+    "attachmentsCount" : 8
+  },
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Search User applies filters"
+  }, {
+    "name" : "testClass",
+    "value" : "Search User applies filters"
+  }, {
+    "name" : "testMethod",
+    "value" : "I add Pizza to the search"
+  }, {
+    "name" : "package",
+    "value" : "Search User applies filters"
+  } ],
+  "parameters" : [ ],
+  "hidden" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ]
+  }
+}

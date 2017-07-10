@@ -1,0 +1,87 @@
+{
+  "uid" : "b367baf0c3a34a72",
+  "name" : "I click on \"Search\" button",
+  "fullName" : "Search User applies filters.I click on \"Search\" button",
+  "historyId" : "6b546aae5470114a9650e1ee6c836399",
+  "time" : {
+    "start" : 1499696422068,
+    "stop" : 1499696422229,
+    "duration" : 161
+  },
+  "status" : "passed",
+  "description" : "",
+  "descriptionHtml" : "",
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "POST /wd/hub/session/ed305f15-191b-43bb-8a30-285de480f7a3/element",
+      "time" : {
+        "start" : 1499696422069,
+        "stop" : 1499696422100,
+        "duration" : 31
+      },
+      "status" : "passed",
+      "hasContent" : true,
+      "stepsCount" : 0,
+      "attachmentsCount" : 2,
+      "steps" : [ ],
+      "attachments" : [ {
+        "uid" : "b20bb8590544dea4",
+        "name" : "Request",
+        "source" : "b20bb8590544dea4.json",
+        "type" : "application/json",
+        "size" : 58
+      }, {
+        "uid" : "b34fcca44dd27d6e",
+        "name" : "Response",
+        "source" : "b34fcca44dd27d6e.json",
+        "type" : "application/json",
+        "size" : 222
+      } ],
+      "parameters" : [ ]
+    }, {
+      "name" : "POST /wd/hub/session/ed305f15-191b-43bb-8a30-285de480f7a3/element/12/click",
+      "time" : {
+        "start" : 1499696422103,
+        "stop" : 1499696422228,
+        "duration" : 125
+      },
+      "status" : "passed",
+      "hasContent" : true,
+      "stepsCount" : 0,
+      "attachmentsCount" : 1,
+      "steps" : [ ],
+      "attachments" : [ {
+        "uid" : "12a95acae361acb5",
+        "name" : "Response",
+        "source" : "12a95acae361acb5.json",
+        "type" : "application/json",
+        "size" : 195
+      } ],
+      "parameters" : [ ]
+    } ],
+    "hasContent" : true,
+    "stepsCount" : 2,
+    "attachmentsCount" : 3
+  },
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Search User applies filters"
+  }, {
+    "name" : "testClass",
+    "value" : "Search User applies filters"
+  }, {
+    "name" : "testMethod",
+    "value" : "I click on \"Search\" button"
+  }, {
+    "name" : "package",
+    "value" : "Search User applies filters"
+  } ],
+  "parameters" : [ ],
+  "hidden" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ]
+  }
+}

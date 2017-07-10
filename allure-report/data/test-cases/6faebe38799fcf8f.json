@@ -1,0 +1,159 @@
+{
+  "uid" : "6faebe38799fcf8f",
+  "name" : "Business profile is opened",
+  "fullName" : "Report results information Report critical information of a search result.Business profile is opened",
+  "historyId" : "a5cc7dd8b277704223d56c1bdf9fd7e0",
+  "time" : {
+    "start" : 1499696496862,
+    "stop" : 1499696496981,
+    "duration" : 119
+  },
+  "status" : "passed",
+  "description" : "",
+  "descriptionHtml" : "",
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "POST /wd/hub/session/1c945d64-ba4a-472e-8b47-87fb67b33158/element",
+      "time" : {
+        "start" : 1499696496863,
+        "stop" : 1499696496890,
+        "duration" : 27
+      },
+      "status" : "passed",
+      "hasContent" : true,
+      "stepsCount" : 0,
+      "attachmentsCount" : 2,
+      "steps" : [ ],
+      "attachments" : [ {
+        "uid" : "adc54622319e1b9a",
+        "name" : "Request",
+        "source" : "adc54622319e1b9a.json",
+        "type" : "application/json",
+        "size" : 71
+      }, {
+        "uid" : "b1368e33de97868d",
+        "name" : "Response",
+        "source" : "b1368e33de97868d.json",
+        "type" : "application/json",
+        "size" : 223
+      } ],
+      "parameters" : [ ]
+    }, {
+      "name" : "POST /wd/hub/session/1c945d64-ba4a-472e-8b47-87fb67b33158/elements",
+      "time" : {
+        "start" : 1499696496893,
+        "stop" : 1499696496922,
+        "duration" : 29
+      },
+      "status" : "passed",
+      "hasContent" : true,
+      "stepsCount" : 0,
+      "attachmentsCount" : 2,
+      "steps" : [ ],
+      "attachments" : [ {
+        "uid" : "f2fe0baa6d7792f1",
+        "name" : "Request",
+        "source" : "f2fe0baa6d7792f1.json",
+        "type" : "application/json",
+        "size" : 71
+      }, {
+        "uid" : "19c2dd58cf654ab3",
+        "name" : "Response",
+        "source" : "19c2dd58cf654ab3.json",
+        "type" : "application/json",
+        "size" : 246
+      } ],
+      "parameters" : [ ]
+    }, {
+      "name" : "GET /wd/hub/session/1c945d64-ba4a-472e-8b47-87fb67b33158/element/48/displayed",
+      "time" : {
+        "start" : 1499696496922,
+        "stop" : 1499696496952,
+        "duration" : 30
+      },
+      "status" : "passed",
+      "hasContent" : true,
+      "stepsCount" : 0,
+      "attachmentsCount" : 1,
+      "steps" : [ ],
+      "attachments" : [ {
+        "uid" : "5d71cfc71173f2d3",
+        "name" : "Response",
+        "source" : "5d71cfc71173f2d3.json",
+        "type" : "application/json",
+        "size" : 196
+      } ],
+      "parameters" : [ ]
+    }, {
+      "name" : "POST /wd/hub/session/1c945d64-ba4a-472e-8b47-87fb67b33158/element",
+      "time" : {
+        "start" : 1499696496952,
+        "stop" : 1499696496965,
+        "duration" : 13
+      },
+      "status" : "passed",
+      "hasContent" : true,
+      "stepsCount" : 0,
+      "attachmentsCount" : 2,
+      "steps" : [ ],
+      "attachments" : [ {
+        "uid" : "840732b0aa51db06",
+        "name" : "Request",
+        "source" : "840732b0aa51db06.json",
+        "type" : "application/json",
+        "size" : 71
+      }, {
+        "uid" : "25b6d0a07813b789",
+        "name" : "Response",
+        "source" : "25b6d0a07813b789.json",
+        "type" : "application/json",
+        "size" : 223
+      } ],
+      "parameters" : [ ]
+    }, {
+      "name" : "GET /wd/hub/session/1c945d64-ba4a-472e-8b47-87fb67b33158/element/48/displayed",
+      "time" : {
+        "start" : 1499696496968,
+        "stop" : 1499696496980,
+        "duration" : 12
+      },
+      "status" : "passed",
+      "hasContent" : true,
+      "stepsCount" : 0,
+      "attachmentsCount" : 1,
+      "steps" : [ ],
+      "attachments" : [ {
+        "uid" : "fe0c911e8cdbb944",
+        "name" : "Response",
+        "source" : "fe0c911e8cdbb944.json",
+        "type" : "application/json",
+        "size" : 195
+      } ],
+      "parameters" : [ ]
+    } ],
+    "hasContent" : true,
+    "stepsCount" : 5,
+    "attachmentsCount" : 8
+  },
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Report results information Report critical information of a search result"
+  }, {
+    "name" : "testClass",
+    "value" : "Report results information Report critical information of a search result"
+  }, {
+    "name" : "testMethod",
+    "value" : "Business profile is opened"
+  }, {
+    "name" : "package",
+    "value" : "Report results information Report critical information of a search result"
+  } ],
+  "parameters" : [ ],
+  "hidden" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ]
+  }
+}

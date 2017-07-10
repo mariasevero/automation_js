@@ -1,0 +1,4 @@
+{
+    "using": "xpath",
+    "value": "//*[@id='wrap']//*[@class='suggested-filters_filter-list']//li[7]"
+}
