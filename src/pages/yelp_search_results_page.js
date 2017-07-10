@@ -43,7 +43,7 @@ class YelpSearchResultsPage {
   *       The initial string is of the type "             Showing 1-10 of 1965         "
   *       and is taken from the pagination label.
   */
-  logNumberOfSearchResults() {
+  reportNumberOfSearchResults() {
     let paginationText = browser.getHTML('.pagination-results-window', false);
     paginationText = paginationText.trim();
 
@@ -67,12 +67,11 @@ class YelpSearchResultsPage {
   /**
    * @desc: logs the name and rating of each business in the search result.
    */
-  logStarRatingByBizName() {
+  reportStarRatingByBizName() {
     const bizNameSelector = '.indexed-biz-name';
     const bizStarRating = "[class*='i-stars']";
     const ratings = [];
 
-    console.log('\n ******** REPORT OF SEARCH RESULTS: BUSINESS RATINGS ********');
     this.searchResult.value.forEach(function (element) {
       const title = browser.elementIdElement(element.ELEMENT, bizNameSelector).getText();
       const stars = browser.elementIdElement(element.ELEMENT, bizStarRating).getAttribute('title');

@@ -19,7 +19,7 @@ class YelpBusinessProfile {
    * @desc: logs in the console information about the business. 
    * @var: address contains bussiness address.
    */
-  logBusinessInfo() {
+  reportBusinessInfo() {
     let address = this.bizAddressLabel.getText();
     address = address.split('\n');
 
@@ -37,7 +37,7 @@ class YelpBusinessProfile {
    * @var: ammountReviews has the value of the argument and contains the number of reviews 
    *       that will be printed.
    */
-  logCustomerReviews(numberOfReviews) {
+  reportCustomerReviews(numberOfReviews) {
     let ammountOfReviews = numberOfReviews;
     
     if (ammountOfReviews > this.customerReviewList.value.length) {
@@ -57,12 +57,8 @@ class YelpBusinessProfile {
         reviews.push(businessReviews);
       }
       return { reviews };
-    }
-    
+    } 
   }
-
-
-
 }
 
 module.exports = new YelpBusinessProfile();

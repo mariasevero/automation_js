@@ -12,19 +12,13 @@ module.exports = function () {
   this.Then(/^A list of restaurants is displayed$/, function () {
     const isListPresent = YelpSearchResultsPage.isSearchResultsListPresent();
     expect(isListPresent).to.equal(true, `List of results is present: ${isListPresent}`);
-  });
-
-  this.Then(/^Console reports total number of Search results with number of results in the current page$/, function () {
     process.send({
       event: 'runner:extra',
-      body: YelpSearchResultsPage.logNumberOfSearchResults()
+      body: YelpSearchResultsPage.reportNumberOfSearchResults()
     });
-  });
-
-  this.Then(/^Console reports the star rating of each of the results in the first result page$/, function () {
     process.send({
       event: 'runner:extra',
-      body: YelpSearchResultsPage.logStarRatingByBizName()
+      body: YelpSearchResultsPage.reportStarRatingByBizName()
     });
   });
 
