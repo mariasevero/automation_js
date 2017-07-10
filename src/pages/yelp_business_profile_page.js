@@ -16,7 +16,7 @@ class YelpBusinessProfile {
   }
 
   /**
-   * @desc: logs in the console information about the business. 
+   * @desc: reports business critical information
    * @var: address contains bussiness address.
    */
   reportBusinessInfo() {
@@ -27,37 +27,36 @@ class YelpBusinessProfile {
       title: this.bizNameTitle.getText(),
       address: `${address[0]}, ${address[1]}`,
       phone: this.bizPhoneLabel.getText(),
-      website: this.bizWebsiteLink.getText()
+      website: this.bizWebsiteLink.getText(),
     };
     return business;
   }
 
   /**
-   * @desc: logs in the console some business reviews.
-   * @var: ammountReviews has the value of the argument and contains the number of reviews 
+   * @desc: reports business reviews
+   * @var: ammountReviews has the value of the argument and contains the number of reviews
    *       that will be printed.
    */
   reportCustomerReviews(numberOfReviews) {
     let ammountOfReviews = numberOfReviews;
-    
+
     if (ammountOfReviews > this.customerReviewList.value.length) {
-      let error ='There are not enough reviews for this business.';
+      const error = 'There are not enough reviews for this business.';
       ammountOfReviews = this.customerReviewList.value.length;
       return error;
-    } else {
-      const reviews = [];
-      for (let i = 0; i < numberOfReviews; i += 1) {
-        const reviewNumber = i + 1;
-        const customerReviewText = browser.elementIdText(this.customerReviewList.value[i].ELEMENT).value;
+    }
+    const reviews = [];
+    for (let i = 0; i < numberOfReviews; i += 1) {
+      const reviewNumber = i + 1;
+      const customerReviewText = browser.elementIdText(this.customerReviewList.value[i].ELEMENT).value;
 
-        const businessReviews = {
-          reviewNumber,
-          review: customerReviewText
-        };
-        reviews.push(businessReviews);
-      }
-      return { reviews };
-    } 
+      const businessReviews = {
+        reviewNumber,
+        review: customerReviewText,
+      };
+      reviews.push(businessReviews);
+    }
+    return { reviews };
   }
 }
 

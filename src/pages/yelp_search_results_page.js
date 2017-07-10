@@ -1,5 +1,3 @@
-const UtilsPage = require('../pages/utils_page.js');
-
 class YelpSearchResultsPage {
 
   get findInput() { return browser.element('#find_desc'); }
@@ -57,8 +55,8 @@ class YelpSearchResultsPage {
     paginationData.splice(0, 1, resultsPerPage[1]);
 
     const numberOfResults = {
-      totalResults: `${paginationData[0]}`, 
-      pageResults: `${paginationData[1]}`
+      totalResults: `${paginationData[0]}`,
+      pageResults: `${paginationData[1]}`,
     };
 
     return numberOfResults;
@@ -86,9 +84,6 @@ class YelpSearchResultsPage {
 
     return { ratings };
   }
-
-
-
 
   /**
    * @desc: opens the business profile of a business which is selected by its position.

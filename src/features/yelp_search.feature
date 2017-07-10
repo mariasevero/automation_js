@@ -14,7 +14,7 @@ Feature: Search
   Background: 
     Given I open the url "https://www.yelp.com"
 
-  Scenario Outline: User searches a restaurant
+  Scenario Outline: I search a restaurant
     When I select <category>
     And I add <search_text> to the search
     And I click on "Search" button
@@ -24,8 +24,7 @@ Feature: Search
       | category    | search_text |
       | Restaurants | Pizza       | 
 
-
-  Scenario: User applies filters
+  Scenario: I apply filters
     When I select Restaurants
     And I add Pizza to the search
     And I click on "Search" button

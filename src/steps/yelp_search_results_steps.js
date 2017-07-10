@@ -14,11 +14,11 @@ module.exports = function () {
     expect(isListPresent).to.equal(true, `List of results is present: ${isListPresent}`);
     process.send({
       event: 'runner:extra',
-      body: YelpSearchResultsPage.reportNumberOfSearchResults()
+      body: YelpSearchResultsPage.reportNumberOfSearchResults(),
     });
     process.send({
       event: 'runner:extra',
-      body: YelpSearchResultsPage.reportStarRatingByBizName()
+      body: YelpSearchResultsPage.reportStarRatingByBizName(),
     });
   });
 

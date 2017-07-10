@@ -7,11 +7,11 @@ module.exports = function () {
 
     process.send({
       event: 'runner:extra',
-      body: YelpBusinessProfile.reportBusinessInfo()
+      body: YelpBusinessProfile.reportBusinessInfo(),
     });
     process.send({
       event: 'runner:extra',
-      body: YelpBusinessProfile.reportCustomerReviews(3)  // Number of reviews to display: 3 (by document).
+      body: YelpBusinessProfile.reportCustomerReviews(3),  // Number of reviews to display: 3 (by document).
     });
   });
 };
