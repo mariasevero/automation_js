@@ -1,8 +1,8 @@
-Feature: Search
+Feature: Search business and view business information
 
-  In order to see business pages
-  Users should be able to perform a search
-  using keywords and filters.
+  In order to see business pages and their information
+  I should be able to perform a search using keywords 
+  and filters, and then open the desired business page.
 
   Considerations due to difference of Yelp actual behavior with Coding Challenge scenario:
   - Step 3 no longer applies, after doing Step 2 the page automatically searches
